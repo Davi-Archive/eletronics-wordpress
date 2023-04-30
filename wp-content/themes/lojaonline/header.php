@@ -27,7 +27,7 @@
 
 
 <body class="sticky-header newsletter-popup-modal">
-    <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#top" class="back-to-top" id="backto-top"><i class="fal fa-arrow-up"></i></a>
+    <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#top" class="back-to-top" id="backto-top"><i class="fas fa-arrow-up"></i></a>
     <header class="header axil-header header-style-1">
         <div class="header-top-campaign">
             <div class="container position-relative">
@@ -42,26 +42,6 @@
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="header-top-dropdown">
-                            <div class="dropdown">
-                                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    English
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="https://new.axilthemes.com/demo/template/etrade/index-1.html#">English</a></li>
-                                    <li><a class="dropdown-item" href="https://new.axilthemes.com/demo/template/etrade/index-1.html#">Arabic</a></li>
-                                    <li><a class="dropdown-item" href="https://new.axilthemes.com/demo/template/etrade/index-1.html#">Spanish</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown">
-                                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    USD
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="https://new.axilthemes.com/demo/template/etrade/index-1.html#">USD</a></li>
-                                    <li><a class="dropdown-item" href="https://new.axilthemes.com/demo/template/etrade/index-1.html#">AUD</a></li>
-                                    <li><a class="dropdown-item" href="https://new.axilthemes.com/demo/template/etrade/index-1.html#">EUR</a></li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                     <div class="col-sm-6">
