@@ -35,7 +35,7 @@
                     <p>Open Doors To A World Of Fashion <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#">Discover More</a></p>
                 </div>
             </div>
-            <button class="remove-campaign"><i class="fa-solid fa-times"></i></button>
+            <button class="remove-campaign"><i class="fa-solid fa-circle-xmark"></i></button>
         </div>
         <div class="axil-header-top">
             <div class="container">
@@ -164,7 +164,7 @@
                         <ul class="action-list">
                             <li class="axil-search">
                                 <a href="javascript:void(0)" class="header-search-icon" title="Search">
-                                    <i class="flaticon-magnifying-glass"></i>
+                                    <i class="fa-solid fa-magnifying-glass"></i>
                                 </a>
                             </li>
                             <li class="wishlist">
@@ -175,12 +175,12 @@
                             <li class="shopping-cart">
                                 <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" class="cart-dropdown-btn">
                                     <span class="cart-count">3</span>
-                                    <i class="flaticon-shopping-cart"></i>
+                                    <i class="fa-solid fa-cart-shopping"></i>
                                 </a>
                             </li>
                             <li class="my-account">
                                 <a href="javascript:void(0)">
-                                    <i class="flaticon-person"></i>
+                                    <i class="fa-solid fa-user"></i>
                                 </a>
                                 <div class="my-account-dropdown">
                                     <span class="title">QUICKLINKS</span>
