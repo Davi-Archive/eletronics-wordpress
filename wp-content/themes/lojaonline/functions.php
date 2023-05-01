@@ -23,8 +23,12 @@ function register_code()
     );
     wp_enqueue_style('register-style');
 
+    wp_enqueue_style('google-font-material', 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0', [], '2.0.0', false);
+
 
     // Enqueue my scripts.
+
+    wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery.js', array(), null, true);
 
     wp_enqueue_script('jquery-ui', get_template_directory_uri() . '/js/jquery-ui.min.js', array(), null, true);
 
@@ -34,17 +38,15 @@ function register_code()
 
     wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), null, true);
 
-    wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), null, true);
-
     wp_enqueue_script('counterup', get_template_directory_uri() . '/js/counterup.js', array(), null, true);
+
+    wp_enqueue_script('owl', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), null, true);
 
     wp_enqueue_script('imagesloaded', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array(), null, true);
 
     wp_enqueue_script('isotope', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array(), null, true);
 
     wp_enqueue_script('cookie', get_template_directory_uri() . '/js/js.cookie.js', array(), null, true);
-
-    wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array(), null, true);
 
     wp_enqueue_script('modernizr', get_template_directory_uri() . '/js/modernizr.min.js', array(), null, true);
 
@@ -55,6 +57,14 @@ function register_code()
     wp_enqueue_script('slick', get_template_directory_uri() . '/js/slick.min.js', array(), null, true);
 
     wp_enqueue_script('waypoints', get_template_directory_uri() . '/js/waypoints.min.js', array(), null, true);
+
+    wp_enqueue_script(
+        'main',
+        get_template_directory_uri() . '/js/main.js',
+        array(),
+        null,
+        true
+    );
 
     wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/cd8a4ed1bd.js', array(), null, true);
 
