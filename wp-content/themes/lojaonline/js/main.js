@@ -255,6 +255,77 @@
     axilSlickActivation: function (e) {
       $(".categrie-product-activation").owlCarousel({
         loop: true,
+        margin: 10,
+        nav: true,
+        navText: [
+          '<button class="slide-arrow prev-arrow"><i class="fas fa-long-arrow-left"></i></button>',
+          '<button class="slide-arrow next-arrow"><i class="fas fa-long-arrow-right"></i></button>',
+        ],
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 3,
+          },
+          1000: {
+            items: 5,
+          },
+        },
+      });
+
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        autoplay: true,
+        margin: 10,
+        nav: true,
+        navText: [
+          '<button class="slide-arrow prev-arrow"><i class="fas fa-long-arrow-left"></i></button>',
+          '<button class="slide-arrow next-arrow"><i class="fas fa-long-arrow-right"></i></button>',
+        ],
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 3,
+          },
+          1000: {
+            items: 5,
+          },
+        },
+      });
+
+      $(".explore-product-activation").owlCarousel({
+        loop: true,
+        margin: 15,
+        nav: true,
+        navText: [
+          '<button class="slide-arrow prev-arrow"><i class="fas fa-long-arrow-left"></i></button>',
+          '<button class="slide-arrow next-arrow"><i class="fas fa-long-arrow-right"></i></button>',
+        ],
+        responsive: {
+          0: {
+            items: 1,
+            nav: true,
+          },
+          600: {
+            items: 2,
+            nav: false,
+          },
+          1000: {
+            items: 2,
+            autoplay: true,
+            autoplayHoverPause: false,
+            nav: true,
+            dots: false,
+            loop: true,
+          },
+        },
+      });
+
+      $(".categrie-product-activation-3").owlCarousel({
+        loop: true,
         autoplay: false,
         autoPlaySpeed: 5000,
         autoplayTimeout: 5000,
@@ -284,57 +355,6 @@
           },
         },
       });
-
-
-    $('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:5
-        }
-    }
-    })
-
-
-     $(".categrie-product-activation-3").owlCarousel({
-       loop: true,
-       autoplay: false,
-       autoPlaySpeed: 5000,
-       autoplayTimeout: 5000,
-       autoplayHoverPause: false,
-       margin: 10,
-       responsiveClass: true,
-       navText: [
-         '<button class="slide-arrow prev-arrow"><i class="fas fa-long-arrow-left"></i></button>',
-         '<button class="slide-arrow next-arrow"><i class="fas fa-long-arrow-right"></i></button>',
-       ],
-       responsive: {
-         0: {
-           items: 5,
-           nav: true,
-         },
-         600: {
-           items: 2,
-           nav: false,
-         },
-         1000: {
-           items: 2,
-           autoplay: true,
-           autoplayHoverPause: false,
-           nav: true,
-           dots: false,
-           loop: true,
-         },
-       },
-     });
 
       $(".categrie-product-activation-2").owlCarousel({
         loop: true,
@@ -368,18 +388,6 @@
             loop: true,
           },
         },
-      });
-
-      $(".explore-product-activation").slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        dots: false,
-        prevArrow:
-          '<button class="slide-arrow prev-arrow"><i class="fas fa-long-arrow-left"></i></button>',
-        nextArrow:
-          '<button class="slide-arrow next-arrow"><i class="fas fa-long-arrow-right"></i></button>',
       });
 
       $(".new-arrivals-product-activation").slick({
