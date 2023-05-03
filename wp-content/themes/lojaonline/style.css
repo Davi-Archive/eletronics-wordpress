@@ -15,6 +15,14 @@ Theme name: Loja Online
 @import "./css/owl.carousel.min.css";
 @import "./css/owl.theme.default.min.css";
 
+.product-new-arrival-single .owl-stage-outer .owl-stage .owl-item {
+  width: 250px !important;
+}
+
+.new-arrivals-product-area{
+height: 550px;
+}
+
 .owl-nav {
   display: flex;
   flex-direction: row;
