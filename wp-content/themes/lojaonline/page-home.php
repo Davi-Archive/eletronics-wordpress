@@ -1,6 +1,8 @@
 <?php get_header() ?>
 
 <main class="main-wrapper">
+
+    <!-- Banner Header Start-->
     <div class="axil-main-slider-area main-slider-style-1">
         <div class="container">
             <div class="row align-items-center" style="flex-wrap: nowrap;">
@@ -45,12 +47,11 @@
                                     </div>
                                 </div>
                             </div>
-
-
-
                         </div>
                     </div>
                 </div>
+
+                <!-- Banner Header End-->
 
                 <div class="slider-thumb-activation-one axil-slick-dots slick-initialized slick-slider slick-dotted main-slider-large-thumb">
                     <div class="single-slide slick-slide slick-cloned .slick-track" style="width: 60%;">
@@ -78,8 +79,8 @@
                 <h2 class="title">Browse by Category</h2>
             </div>
             <div class="owl-carousel">
-                <div style="width: 163px;" tabindex="-1" data-slick-index="-7" aria-hidden="true">
-                    <div class="categrie-product sal-animate" data-sal="zoom-out" data-sal-delay="700" data-sal-duration="500">
+                <div style="width: 163px;">
+                    <div class="categrie-product sal-animate">
                         <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="-1">
                             <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-7.png" alt="product categorie">
                             <h6 class="cat-title">Networking</h6>
@@ -87,289 +88,36 @@
                     </div>
                     <!-- End .categrie-product -->
                 </div>
-                <div style="width: 163px;" tabindex="-1" data-slick-index="-7" aria-hidden="true">
-                    <div class="categrie-product sal-animate" data-sal="zoom-out" data-sal-delay="700" data-sal-duration="500">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="-1">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-7.png" alt="product categorie">
-                            <h6 class="cat-title">Networking</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
-                <div style="width: 163px;" tabindex="-1" data-slick-index="-6" aria-hidden="true">
-                    <div class="categrie-product sal-animate" data-sal="zoom-out" data-sal-delay="800" data-sal-duration="500">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="-1">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-8.png" alt="product categorie">
-                            <h6 class="cat-title">PC Gaming</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
-                <div style="width: 163px;" tabindex="-1" data-slick-index="-5" aria-hidden="true">
-                    <div class="categrie-product">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="-1">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-1.png" alt="product categorie">
-                            <h6 class="cat-title">Smartwatches</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
-                <div style="width: 163px;" tabindex="-1" data-slick-index="-4" aria-hidden="true">
-                    <div class="categrie-product">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="-1">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-9.png" alt="product categorie">
-                            <h6 class="cat-title">Headphones</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
-                <div style="width: 163px;" tabindex="-1" data-slick-index="-3" aria-hidden="true">
-                    <div class="categrie-product">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="-1">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-10.png" alt="product categorie">
-                            <h6 class="cat-title">Camera &amp; Photo</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
-                <div style="width: 163px;" tabindex="-1" data-slick-index="-2" aria-hidden="true">
-                    <div class="categrie-product">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="-1">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-8.png" alt="product categorie">
-                            <h6 class="cat-title">Video Games</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
-                <div style="width: 163px;" tabindex="-1" data-slick-index="-1" aria-hidden="true">
-                    <div class="categrie-product">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="-1">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-1.png" alt="product categorie">
-                            <h6 class="cat-title">Sports</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
-                <div class="slick-single-layout slick-slide slick-current slick-active" style="width: 163px;" tabindex="0" data-slick-index="0" aria-hidden="false">
-                    <div class="categrie-product sal-animate" data-sal="zoom-out" data-sal-delay="200" data-sal-duration="500">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="0">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-4.png" alt="product categorie">
-                            <h6 class="cat-title">Phones</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
-                <div class="slick-single-layout slick-slide slick-active" style="width: 163px;" tabindex="0" data-slick-index="1" aria-hidden="false">
-                    <div class="categrie-product sal-animate" data-sal="zoom-out" data-sal-delay="300" data-sal-duration="500">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="0">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-5.png" alt="product categorie">
-                            <h6 class="cat-title">Computers</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
-                <div class="slick-single-layout slick-slide slick-active" style="width: 163px;" tabindex="0" data-slick-index="2" aria-hidden="false">
-                    <div class="categrie-product sal-animate" data-sal="zoom-out" data-sal-delay="400" data-sal-duration="500">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="0">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-11.png" alt="product categorie">
-                            <h6 class="cat-title">Accessories</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
-                <div class="slick-single-layout slick-slide slick-active" style="width: 163px;" tabindex="0" data-slick-index="3" aria-hidden="false">
-                    <div class="categrie-product sal-animate" data-sal="zoom-out" data-sal-delay="500" data-sal-duration="500">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="0">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-6.png" alt="product categorie">
-                            <h6 class="cat-title">Laptops</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
-                <div class="slick-single-layout slick-slide slick-active" style="width: 163px;" tabindex="0" data-slick-index="4" aria-hidden="false">
-                    <div class="categrie-product sal-animate" data-sal="zoom-out" data-sal-delay="600" data-sal-duration="500">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="0">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-2.png" alt="product categorie">
-                            <h6 class="cat-title">Monitors</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
-                <div class="slick-single-layout slick-slide slick-active" style="width: 163px;" tabindex="0" data-slick-index="5" aria-hidden="false">
-                    <div class="categrie-product sal-animate" data-sal="zoom-out" data-sal-delay="700" data-sal-duration="500">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="0">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-7.png" alt="product categorie">
-                            <h6 class="cat-title">Networking</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
-                <div class="slick-single-layout slick-slide slick-active" style="width: 163px;" tabindex="0" data-slick-index="6" aria-hidden="false">
-                    <div class="categrie-product sal-animate" data-sal="zoom-out" data-sal-delay="800" data-sal-duration="500">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="0">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-8.png" alt="product categorie">
-                            <h6 class="cat-title">PC Gaming</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
-                <div class="slick-single-layout slick-slide" style="width: 163px;" tabindex="-1" data-slick-index="7" aria-hidden="true">
-                    <div class="categrie-product">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="-1">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-1.png" alt="product categorie">
-                            <h6 class="cat-title">Smartwatches</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
-                <div class="slick-single-layout slick-slide" style="width: 163px;" tabindex="-1" data-slick-index="8" aria-hidden="true">
-                    <div class="categrie-product">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="-1">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-9.png" alt="product categorie">
-                            <h6 class="cat-title">Headphones</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
-                <div class="slick-single-layout slick-slide" style="width: 163px;" tabindex="-1" data-slick-index="9" aria-hidden="true">
-                    <div class="categrie-product">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="-1">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-10.png" alt="product categorie">
-                            <h6 class="cat-title">Camera &amp; Photo</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
-                <div class="slick-single-layout slick-slide" style="width: 163px;" tabindex="-1" data-slick-index="10" aria-hidden="true">
-                    <div class="categrie-product">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="-1">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-8.png" alt="product categorie">
-                            <h6 class="cat-title">Video Games</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
-                <div class="slick-single-layout slick-slide" style="width: 163px;" tabindex="-1" data-slick-index="11" aria-hidden="true">
-                    <div class="categrie-product">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="-1">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-1.png" alt="product categorie">
-                            <h6 class="cat-title">Sports</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
-                <div style="width: 163px;" tabindex="-1" data-slick-index="12" aria-hidden="true">
-                    <div class="categrie-product sal-animate" data-sal="zoom-out" data-sal-delay="200" data-sal-duration="500">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="-1">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-4.png" alt="product categorie">
-                            <h6 class="cat-title">Phones</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
-                <div style="width: 163px;" tabindex="-1" data-slick-index="13" aria-hidden="true">
-                    <div class="categrie-product sal-animate" data-sal="zoom-out" data-sal-delay="300" data-sal-duration="500">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="-1">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-5.png" alt="product categorie">
-                            <h6 class="cat-title">Computers</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
-                <div style="width: 163px;" tabindex="-1" data-slick-index="14" aria-hidden="true">
-                    <div class="categrie-product sal-animate" data-sal="zoom-out" data-sal-delay="400" data-sal-duration="500">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="-1">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-11.png" alt="product categorie">
-                            <h6 class="cat-title">Accessories</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
-                <div style="width: 163px;" tabindex="-1" data-slick-index="15" aria-hidden="true">
-                    <div class="categrie-product sal-animate" data-sal="zoom-out" data-sal-delay="500" data-sal-duration="500">
+                <div style="width: 163px;">
+                    <div class="categrie-product sal-animate">
                         <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="-1">
                             <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-6.png" alt="product categorie">
-                            <h6 class="cat-title">Laptops</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
-                <div style="width: 163px;" tabindex="-1" data-slick-index="16" aria-hidden="true">
-                    <div class="categrie-product sal-animate" data-sal="zoom-out" data-sal-delay="600" data-sal-duration="500">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="-1">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-2.png" alt="product categorie">
-                            <h6 class="cat-title">Monitors</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
-                <div style="width: 163px;" tabindex="-1" data-slick-index="17" aria-hidden="true">
-                    <div class="categrie-product sal-animate" data-sal="zoom-out" data-sal-delay="700" data-sal-duration="500">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="-1">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-7.png" alt="product categorie">
                             <h6 class="cat-title">Networking</h6>
                         </a>
                     </div>
                     <!-- End .categrie-product -->
                 </div>
-                <div style="width: 163px;" tabindex="-1" data-slick-index="18" aria-hidden="true">
-                    <div class="categrie-product sal-animate" data-sal="zoom-out" data-sal-delay="800" data-sal-duration="500">
+                <div style="width: 163px;">
+                    <div class="categrie-product sal-animate">
                         <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="-1">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-8.png" alt="product categorie">
-                            <h6 class="cat-title">PC Gaming</h6>
+                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-5.png" alt="product categorie">
+                            <h6 class="cat-title">Networking</h6>
                         </a>
                     </div>
                     <!-- End .categrie-product -->
                 </div>
-                <div style="width: 163px;" tabindex="-1" data-slick-index="19" aria-hidden="true">
-                    <div class="categrie-product">
+                <div style="width: 163px;">
+                    <div class="categrie-product sal-animate">
                         <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="-1">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-1.png" alt="product categorie">
-                            <h6 class="cat-title">Smartwatches</h6>
+                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-4.png" alt="product categorie">
+                            <h6 class="cat-title">Networking</h6>
                         </a>
                     </div>
                     <!-- End .categrie-product -->
                 </div>
-                <div style="width: 163px;" tabindex="-1" data-slick-index="20" aria-hidden="true">
-                    <div class="categrie-product">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="-1">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-9.png" alt="product categorie">
-                            <h6 class="cat-title">Headphones</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
-                <div style="width: 163px;" tabindex="-1" data-slick-index="21" aria-hidden="true">
-                    <div class="categrie-product">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="-1">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-10.png" alt="product categorie">
-                            <h6 class="cat-title">Camera &amp; Photo</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
-                <div style="width: 163px;" tabindex="-1" data-slick-index="22" aria-hidden="true">
-                    <div class="categrie-product">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="-1">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-8.png" alt="product categorie">
-                            <h6 class="cat-title">Video Games</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
-                <div style="width: 163px;" tabindex="-1" data-slick-index="23" aria-hidden="true">
-                    <div class="categrie-product">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" tabindex="-1">
-                            <img class="img-fluid" src="<?= get_template_directory_uri() ?>/img/elec-1.png" alt="product categorie">
-                            <h6 class="cat-title">Sports</h6>
-                        </a>
-                    </div>
-                    <!-- End .categrie-product -->
-                </div>
+
+
             </div>
-
-
-
         </div>
     </div>
     </div>

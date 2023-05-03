@@ -279,6 +279,7 @@
         autoplay: true,
         margin: 10,
         nav: true,
+        dots: false,
         navText: [
           '<button class="slide-arrow prev-arrow"><i class="fas fa-long-arrow-left"></i></button>',
           '<button class="slide-arrow next-arrow"><i class="fas fa-long-arrow-right"></i></button>',
