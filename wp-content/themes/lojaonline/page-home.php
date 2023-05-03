@@ -3,13 +3,13 @@
 <main class="main-wrapper">
     <div class="axil-main-slider-area main-slider-style-1">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center" style="flex-wrap: nowrap;">
                 <div class="col-lg-5 col-sm-6">
                     <div class="main-slider-content">
                         <div class="slider-content-activation-one slick-initialized slick-slider">
                             <div class="slick-list draggable">
                                 <div class="slick-track" style="opacity: 1; width: 2020px;">
-                                    <div class="single-slide slick-slide slick-current slick-active sal-animate" data-sal="slide-up" data-sal-delay="400" data-sal-duration="800" data-slick-index="0" aria-hidden="false" style="width: 505px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;" tabindex="0">
+                                    <div class="single-slide slick-slide slick-current slick-active sal-animate">
                                         <span class="subtitle">
                                             <i class="fa-solid fa-fire"></i> Hot Deal In This Week</span>
                                         <h1 class="title">Roco Wireless Headphone</h1>
@@ -51,83 +51,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-7 col-sm-6">
-                    <div class="main-slider-large-thumb">
-                        <div class="slider-thumb-activation-one axil-slick-dots slick-initialized slick-slider slick-dotted">
-                            <div class="slick-list draggable">
-                                <div class="slick-track" style="opacity: 1; width: 4760px; transform: translate3d(-952px, 0px, 0px);">
-                                    <div class="single-slide slick-slide slick-cloned" style="width: 476px;" tabindex="-1" role="tabpanel" aria-describedby="slick-slide-control62" data-slick-index="-2" aria-hidden="true">
-                                        <img src="<?= get_template_directory_uri() ?>/img/product-38.png" alt="Product">
-                                        <div class="product-price">
-                                            <span class="text">From</span>
-                                            <span class="price-amount">$49.00</span>
-                                        </div>
-                                    </div>
-                                    <div class="single-slide slick-slide slick-cloned" style="width: 476px;" tabindex="-1" role="tabpanel" aria-describedby="slick-slide-control63" data-slick-index="-1" aria-hidden="true">
-                                        <img src="<?= get_template_directory_uri() ?>/img/product-39.png" alt="Product">
-                                        <div class="product-price">
-                                            <span class="text">From</span>
-                                            <span class="price-amount">$49.00</span>
-                                        </div>
-                                    </div>
-                                    <div class="single-slide sal-animate slick-slide slick-current slick-active" data-sal="slide-up" data-sal-delay="600" data-sal-duration="1500" style="width: 476px;" tabindex="0" role="tabpanel" id="slick-slide60" aria-describedby="slick-slide-control60" data-slick-index="0" aria-hidden="false">
-                                        <img src="<?= get_template_directory_uri() ?>/img/product-38.png" alt="Product">
-                                        <div class="product-price">
-                                            <span class="text">From</span>
-                                            <span class="price-amount">$49.00</span>
-                                        </div>
-                                    </div>
-                                    <div class="single-slide sal-animate slick-slide slick-active" data-sal="slide-up" data-sal-delay="600" data-sal-duration="1500" style="width: 476px;" tabindex="0" role="tabpanel" id="slick-slide61" aria-describedby="slick-slide-control61" data-slick-index="1" aria-hidden="false">
-                                        <img src="<?= get_template_directory_uri() ?>/img/product-39.png" alt="Product">
-                                        <div class="product-price">
-                                            <span class="text">From</span>
-                                            <span class="price-amount">$49.00</span>
-                                        </div>
-                                    </div>
-                                    <div class="single-slide slick-slide" style="width: 476px;" tabindex="-1" role="tabpanel" id="slick-slide62" aria-describedby="slick-slide-control62" data-slick-index="2" aria-hidden="true">
-                                        <img src="<?= get_template_directory_uri() ?>/img/product-38.png" alt="Product">
-                                        <div class="product-price">
-                                            <span class="text">From</span>
-                                            <span class="price-amount">$49.00</span>
-                                        </div>
-                                    </div>
-                                    <div class="single-slide slick-slide" style="width: 476px;" tabindex="-1" role="tabpanel" id="slick-slide63" aria-describedby="slick-slide-control63" data-slick-index="3" aria-hidden="true">
-                                        <img src="<?= get_template_directory_uri() ?>/img/product-39.png" alt="Product">
-                                        <div class="product-price">
-                                            <span class="text">From</span>
-                                            <span class="price-amount">$49.00</span>
-                                        </div>
-                                    </div>
-                                    <div class="single-slide sal-animate slick-slide slick-cloned" data-sal="slide-up" data-sal-delay="600" data-sal-duration="1500" style="width: 476px;" tabindex="-1" role="tabpanel" aria-describedby="slick-slide-control60" data-slick-index="4" aria-hidden="true">
-                                        <img src="<?= get_template_directory_uri() ?>/img/product-38.png" alt="Product">
-                                        <div class="product-price">
-                                            <span class="text">From</span>
-                                            <span class="price-amount">$49.00</span>
-                                        </div>
-                                    </div>
-                                    <div class="single-slide sal-animate slick-slide slick-cloned" data-sal="slide-up" data-sal-delay="600" data-sal-duration="1500" style="width: 476px;" tabindex="-1" role="tabpanel" aria-describedby="slick-slide-control61" data-slick-index="5" aria-hidden="true">
-                                        <img src="<?= get_template_directory_uri() ?>/img/product-39.png" alt="Product">
-                                        <div class="product-price">
-                                            <span class="text">From</span>
-                                            <span class="price-amount">$49.00</span>
-                                        </div>
-                                    </div>
-                                    <div class="single-slide slick-slide slick-cloned" style="width: 476px;" tabindex="-1" role="tabpanel" aria-describedby="slick-slide-control62" data-slick-index="6" aria-hidden="true">
-                                        <img src="<?= get_template_directory_uri() ?>/img/product-38.png" alt="Product">
-                                        <div class="product-price">
-                                            <span class="text">From</span>
-                                            <span class="price-amount">$49.00</span>
-                                        </div>
-                                    </div>
-                                    <div class="single-slide slick-slide slick-cloned" style="width: 476px;" tabindex="-1" role="tabpanel" aria-describedby="slick-slide-control63" data-slick-index="7" aria-hidden="true">
-                                        <img src="<?= get_template_directory_uri() ?>/img/product-39.png" alt="Product">
-                                        <div class="product-price">
-                                            <span class="text">From</span>
-                                            <span class="price-amount">$49.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
+                <div class="slider-thumb-activation-one axil-slick-dots slick-initialized slick-slider slick-dotted main-slider-large-thumb">
+                    <div class="single-slide slick-slide slick-cloned .slick-track" style="width: 60%;">
+                        <img src="<?= get_template_directory_uri() ?>/img/product-38.png" alt="Product">
+                        <div class="product-price">
+                            <span class="text">From</span>
+                            <span class="price-amount">$49.00</span>
                         </div>
                     </div>
                 </div>
