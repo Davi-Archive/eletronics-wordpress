@@ -254,32 +254,11 @@
     },
 
     axilSlickActivation: function (e) {
-      $(".categrie-product-activation").owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        navText: [
-          '<button class="slide-arrow prev-arrow"><i class="fas fa-long-arrow-left"></i></button>',
-          '<button class="slide-arrow next-arrow"><i class="fas fa-long-arrow-right"></i></button>',
-        ],
-        responsive: {
-          0: {
-            items: 1,
-          },
-          600: {
-            items: 3,
-          },
-          1000: {
-            items: 5,
-          },
-        },
-      });
-
       $(".owl-carousel").owlCarousel({
         loop: true,
         autoplay: true,
         margin: 10,
-        nav: true,
+        nav: false,
         dots: false,
         navText: [
           '<button class="slide-arrow prev-arrow"><i class="fas fa-long-arrow-left"></i></button>',
@@ -299,13 +278,11 @@
       });
 
       // activate aRROW
-      $(".owl-nav").removeClass("disabled");
+      $(".owl-nav").addClass("disabled");
 
       $("#quick-view-modal").on("shown.bs.modal", function (event) {
         $(".slick-slider").slick("setPosition");
       });
-
-
     },
 
     countdownInit: function (countdownSelector, countdownTime) {
