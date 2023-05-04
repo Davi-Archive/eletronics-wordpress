@@ -257,7 +257,8 @@
       $(".owl-carousel").owlCarousel({
         loop: true,
         autoplay: true,
-        margin: 10,
+        margin: 15,
+        autoplayTimeout: 3000,
         nav: false,
         dots: false,
         navText: [
@@ -276,9 +277,6 @@
           },
         },
       });
-
-      // activate aRROW
-      $(".owl-nav").addClass("disabled");
 
       $("#quick-view-modal").on("shown.bs.modal", function (event) {
         $(".slick-slider").slick("setPosition");

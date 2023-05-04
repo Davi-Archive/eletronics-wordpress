@@ -326,6 +326,8 @@
                 </div>
                 <div class="container-new-arrivals">
                     <div class="owl-carousel product-new-arrival-single">
+
+                        <!-- Single Product Start -->
                         <div class="axil-product product-style-two">
                             <div class="thumbnail">
                                 <a href="https://new.axilthemes.com/demo/template/etrade/single-product.html" tabindex="-1">
@@ -349,7 +351,32 @@
                                 </div>
                             </div>
                         </div>
-
+                        <!-- Single Product End -->
+                        <!-- Single Product Start -->
+                        <div class="axil-product product-style-two">
+                            <div class="thumbnail">
+                                <a href="https://new.axilthemes.com/demo/template/etrade/single-product.html" tabindex="-1">
+                                    <img src="<?= get_template_directory_uri() ?>/img/product-05.png" alt="Product Images" class="sal-animate">
+                                </a>
+                            </div>
+                            <div class="product-content">
+                                <div class="inner">
+                                    <h5 class="title"><a href="https://new.axilthemes.com/demo/template/etrade/single-product.html" tabindex="-1">Google Home</a></h5>
+                                    <div class="product-price-variant">
+                                        <span class="price old-price">$50</span>
+                                        <span class="price current-price">$40</span>
+                                    </div>
+                                </div>
+                                <div class="product-hover-action">
+                                    <ul class="cart-action">
+                                        <li class="quickview"><a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" data-bs-toggle="modal" data-bs-target="#quick-view-modal" tabindex="-1"><i class="far fa-eye"></i></a></li>
+                                        <li class="select-option"><a href="https://new.axilthemes.com/demo/template/etrade/single-product.html">Select Option</a></li>
+                                        <li class="wishlist"><a href="https://new.axilthemes.com/demo/template/etrade/wishlist.html" tabindex="-1"><i class="far fa-heart"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Product End -->
 
                     </div>
                 </div>

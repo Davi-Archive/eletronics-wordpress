@@ -77,8 +77,9 @@ function register_my_menu()
 {
     register_nav_menus(array(
         'menu_principal' => __('Menu Principal'),
-        'informacao' => __('Informação'),
-        'suporte' => __('Suporte')
+        'pagina_topo' => __('Página Topo'),
+        'contato' => __('Contato'),
+        'links_rapidos' => __('Links Rápidos')
     ));
 }
 add_action('init', 'register_my_menu');

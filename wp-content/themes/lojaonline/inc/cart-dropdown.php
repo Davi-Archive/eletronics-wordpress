@@ -1,7 +1,7 @@
    <div class="cart-dropdown" id="cart-dropdown">
        <div class="cart-content-wrap">
            <div class="cart-header">
-               <h2 class="header-title">Cart review</h2>
+               <h2 class="header-title">Carrinho de Compras</h2>
                <button class="cart-close sidebar-close"><i class="fas fa-times"></i></button>
            </div>
            <div class="cart-body">
