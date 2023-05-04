@@ -732,23 +732,25 @@
     <!-- End Axil Product Poster Area  -->
 
     <!-- Start Axil Newsletter Area  -->
-    <div class="axil-newsletter-area axil-section-gap pt--0">
-        <div class="container">
-            <div class="etrade-newsletter-wrapper bg_image bg_image--5">
-                <div class="newsletter-content">
-                    <span class="title-highlighter highlighter-primary2"><i class="fas fa-envelope-open"></i>Newsletter</span>
-                    <h2 class="title mb--40 mb_sm--30">Get weekly update</h2>
-                    <div class="input-group newsletter-form">
-                        <div class="position-relative newsletter-inner mb--15">
-                            <input placeholder="example@gmail.com" type="text">
+    <?php if (get_field('mostrar_newsletter')) : ?>
+        <div class="axil-newsletter-area axil-section-gap pt--0">
+            <div class="container">
+                <div class="etrade-newsletter-wrapper bg_image bg_image--5">
+                    <div class="newsletter-content">
+                        <span class="title-highlighter highlighter-primary2"><i class="fas fa-envelope-open"></i>Newsletter</span>
+                        <h2 class="title mb--40 mb_sm--30">Receba atualizações semanais</h2>
+                        <div class="input-group newsletter-form">
+                            <div class="position-relative newsletter-inner mb--15">
+                                <input placeholder="exemplo@gmail.com" type="text">
+                            </div>
+                            <button type="submit" class="axil-btn mb--15">Receber Notícias</button>
                         </div>
-                        <button type="submit" class="axil-btn mb--15">Subscribe</button>
                     </div>
                 </div>
             </div>
+            <!-- End .container -->
         </div>
-        <!-- End .container -->
-    </div>
+    <?php endif; ?>
     <!-- End Axil Newsletter Area  -->
 
 </main>
@@ -763,8 +765,8 @@
                         <img src="<?= get_template_directory_uri() ?>/img/service1.png" alt="Service">
                     </div>
                     <div class="content">
-                        <h6 class="title">Fast &amp; Secure Delivery</h6>
-                        <p>Tell about your service.</p>
+                        <h6 class="title">Envio Rápido &amp; Segurança</h6>
+                        <p>Envio rápido principalmente para locais próximos.</p>
                     </div>
                 </div>
             </div>
@@ -774,8 +776,8 @@
                         <img src="<?= get_template_directory_uri() ?>/img/service2.png" alt="Service">
                     </div>
                     <div class="content">
-                        <h6 class="title">Money Back Guarantee</h6>
-                        <p>Within 10 days.</p>
+                        <h6 class="title">Devolução garantida</h6>
+                        <p>Dinheiro devolta em até 10 dias.</p>
                     </div>
                 </div>
             </div>
@@ -785,8 +787,8 @@
                         <img src="<?= get_template_directory_uri() ?>/img/service3.png" alt="Service">
                     </div>
                     <div class="content">
-                        <h6 class="title">24 Hour Return Policy</h6>
-                        <p>No question ask.</p>
+                        <h6 class="title">Devolução em 24 horas</h6>
+                        <p>Nenhum questão será peguntada.</p>
                     </div>
                 </div>
             </div>
@@ -796,8 +798,8 @@
                         <img src="<?= get_template_directory_uri() ?>/img/service4.png" alt="Service">
                     </div>
                     <div class="content">
-                        <h6 class="title">Pro Quality Support</h6>
-                        <p>24/7 Live support.</p>
+                        <h6 class="title">Suporte de Qualidade</h6>
+                        <p>Online 24/7.</p>
                     </div>
                 </div>
             </div>
@@ -807,10 +809,6 @@
 
 
 <?php include(TEMPLATEPATH . './inc/quickview-modal.php') ?>
-
-<?php include(TEMPLATEPATH . './inc/search-modal.php') ?>
-
-<?php include(TEMPLATEPATH . '/inc/cart-dropdown.php') ?>
 
 <?php include(TEMPLATEPATH . '/inc/offer-modal.php') ?>
 

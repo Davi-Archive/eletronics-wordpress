@@ -33,6 +33,11 @@
 
 
 <body class="sticky-header newsletter-popup-modal">
+
+    <?php include(TEMPLATEPATH . './inc/search-modal.php') ?>
+
+    <?php include(TEMPLATEPATH . '/inc/cart-dropdown.php') ?>
+    
     <a href="#top" class="back-to-top" id="backto-top"><i class="fas fa-arrow-up"></i></a>
     <header class="header axil-header header-style-1">
         <div class="axil-header-top">
