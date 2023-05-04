@@ -31,10 +31,52 @@
     <!-- Header Scripts End -->
 </head>
 
-
 <?php
 $cart_count = WC()->cart->get_cart_contents_count();
+
+// Pegar produtos e formatar
+
+$products_topo = wc_get_products([
+    'limit' => 6,
+    'tag' => ('menu-topo')
+]);
+
+function format_products($products)
+{
+    $products_final = [];
+    foreach ($products as $product) {
+        $products_final[] = [
+            'name' => $product->get_name(),
+            'link' => $product->get_permalink()
+        ];
+    }
+    return $products_final;
+}
+
+$product_top_menu = format_products($products_topo);
+
+// Pegar posts do blog
+
+$blog_posts = get_posts();
+
+function format_post($posts)
+{
+    $posts_final = [];
+    foreach ($posts as $post) {
+        $posts_final[] = [
+            'title' => $post->post_title,
+            'link' => $post->guid
+        ];
+    }
+    return $posts_final;
+}
+
+// Retornar todos os dados
+
+$data['blog_posts'] = format_post($blog_posts);
+$data['product_top_menu'] = format_products($products_topo);
 ?>
+
 
 
 <body class="sticky-header newsletter-popup-modal" <?php body_class() ?>>
@@ -91,27 +133,20 @@ $cart_count = WC()->cart->get_cart_contents_count();
                                     <a href="#">Home</a>
                                     <ul class="axil-submenu">
                                         <?php
-                                        $args = array(
+                                        wp_nav_menu([
                                             'menu' => 'categorias',
                                             'theme_location' => 'categorias',
                                             'container' => false
-                                        );
-                                        wp_nav_menu($args);
+                                        ]);
                                         ?>
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="#">Loja</a>
                                     <ul class="axil-submenu">
-                                        <li><a href="https://new.axilthemes.com/demo/template/etrade/shop-sidebar.html">Shop With Sidebar</a></li>
-                                        <li><a href="https://new.axilthemes.com/demo/template/etrade/shop.html">Shop no Sidebar</a></li>
-                                        <li><a href="https://new.axilthemes.com/demo/template/etrade/single-product.html">Product Variation 1</a></li>
-                                        <li><a href="https://new.axilthemes.com/demo/template/etrade/single-product-2.html">Product Variation 2</a></li>
-                                        <li><a href="https://new.axilthemes.com/demo/template/etrade/single-product-3.html">Product Variation 3</a></li>
-                                        <li><a href="https://new.axilthemes.com/demo/template/etrade/single-product-4.html">Product Variation 4</a></li>
-                                        <li><a href="https://new.axilthemes.com/demo/template/etrade/single-product-5.html">Product Variation 5</a></li>
-                                        <li><a href="https://new.axilthemes.com/demo/template/etrade/single-product-6.html">Product Variation 6</a></li>
-                                        <li><a href="https://new.axilthemes.com/demo/template/etrade/single-product-7.html">Product Variation 7</a></li>
+                                        <?php foreach ($data['product_top_menu'] as $product) { ?>
+                                            <li><a href="<?= $product['link'] ?>"><?= $product['name'] ?></a></li>
+                                        <?php } ?>
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
@@ -131,13 +166,9 @@ $cart_count = WC()->cart->get_cart_contents_count();
                                 <li class="menu-item-has-children">
                                     <a href="/blog/">Blog</a>
                                     <ul class="axil-submenu">
-                                        <li><a href="https://new.axilthemes.com/demo/template/etrade/blog.html">Blog List</a></li>
-                                        <li><a href="https://new.axilthemes.com/demo/template/etrade/blog-grid.html">Blog Grid</a></li>
-                                        <li><a href="https://new.axilthemes.com/demo/template/etrade/blog-details.html">Standard Post</a></li>
-                                        <li><a href="https://new.axilthemes.com/demo/template/etrade/blog-gallery.html">Gallery Post</a></li>
-                                        <li><a href="https://new.axilthemes.com/demo/template/etrade/blog-video.html">Video Post</a></li>
-                                        <li><a href="https://new.axilthemes.com/demo/template/etrade/blog-audio.html">Audio Post</a></li>
-                                        <li><a href="https://new.axilthemes.com/demo/template/etrade/blog-quote.html">Quote Post</a></li>
+                                        <?php foreach ($data['blog_posts'] as $post) { ?>
+                                            <li><a href="<?= $post['link'] ?>"><?= $post['title'] ?></a></li>
+                                        <?php } ?>
                                     </ul>
                                 </li>
                                 <li><a href="/contato/">Contato</a></li>

@@ -1,94 +1,115 @@
-   <div class="cart-dropdown" id="cart-dropdown">
-       <div class="cart-content-wrap">
-           <div class="cart-header">
-               <h2 class="header-title">Carrinho de Compras</h2>
-               <button class="cart-close sidebar-close"><i class="fas fa-times"></i></button>
-           </div>
-           <div class="cart-body">
-               <ul class="cart-item-list">
-                   <li class="cart-item">
-                       <div class="item-img">
-                           <a href="https://new.axilthemes.com/demo/template/etrade/single-product.html"><img src="<?= get_template_directory_uri() ?>/img/product-01.png" alt="Commodo Blown Lamp"></a>
-                           <button class="close-btn"><i class="fas fa-times"></i></button>
-                       </div>
-                       <div class="item-content">
-                           <div class="product-rating">
-                               <span class="icon">
-                                   <i class="fas fa-star"></i>
-                                   <i class="fas fa-star"></i>
-                                   <i class="fas fa-star"></i>
-                                   <i class="fas fa-star"></i>
-                                   <i class="fas fa-star"></i>
-                               </span>
-                               <span class="rating-number">(64)</span>
-                           </div>
-                           <h3 class="item-title"><a href="https://new.axilthemes.com/demo/template/etrade/single-product-3.html">Wireless PS Handler</a></h3>
-                           <div class="item-price"><span class="currency-symbol">$</span>155.00</div>
-                           <div class="pro-qty item-quantity"><span class="dec qtybtn">-</span>
-                               <input type="number" class="quantity-input" value="15">
-                               <span class="inc qtybtn">+</span>
-                           </div>
-                       </div>
-                   </li>
-                   <li class="cart-item">
-                       <div class="item-img">
-                           <a href="https://new.axilthemes.com/demo/template/etrade/single-product-2.html"><img src="<?= get_template_directory_uri() ?>/img/product-02.png" alt="Commodo Blown Lamp"></a>
-                           <button class="close-btn"><i class="fas fa-times"></i></button>
-                       </div>
-                       <div class="item-content">
-                           <div class="product-rating">
-                               <span class="icon">
-                                   <i class="fas fa-star"></i>
-                                   <i class="fas fa-star"></i>
-                                   <i class="fas fa-star"></i>
-                                   <i class="fas fa-star"></i>
-                                   <i class="fas fa-star"></i>
-                               </span>
-                               <span class="rating-number">(4)</span>
-                           </div>
-                           <h3 class="item-title"><a href="https://new.axilthemes.com/demo/template/etrade/single-product-2.html">Gradient Light Keyboard</a></h3>
-                           <div class="item-price"><span class="currency-symbol">$</span>255.00</div>
-                           <div class="pro-qty item-quantity"><span class="dec qtybtn">-</span>
-                               <input type="number" class="quantity-input" value="5">
-                               <span class="inc qtybtn">+</span>
-                           </div>
-                       </div>
-                   </li>
-                   <li class="cart-item">
-                       <div class="item-img">
-                           <a href="https://new.axilthemes.com/demo/template/etrade/single-product-3.html"><img src="<?= get_template_directory_uri() ?>/img/product-03.png" alt="Commodo Blown Lamp"></a>
-                           <button class="close-btn"><i class="fas fa-times"></i></button>
-                       </div>
-                       <div class="item-content">
-                           <div class="product-rating">
-                               <span class="icon">
-                                   <i class="fas fa-star"></i>
-                                   <i class="fas fa-star"></i>
-                                   <i class="fas fa-star"></i>
-                                   <i class="fas fa-star"></i>
-                                   <i class="fas fa-star"></i>
-                               </span>
-                               <span class="rating-number">(6)</span>
-                           </div>
-                           <h3 class="item-title"><a href="https://new.axilthemes.com/demo/template/etrade/single-product.html">HD CC Camera</a></h3>
-                           <div class="item-price"><span class="currency-symbol">$</span>200.00</div>
-                           <div class="pro-qty item-quantity"><span class="dec qtybtn">-</span>
-                               <input type="number" class="quantity-input" value="100">
-                               <span class="inc qtybtn">+</span>
-                           </div>
-                       </div>
-                   </li>
-               </ul>
-           </div>
-           <div class="cart-footer">
-               <h3 class="cart-subtotal">
-                   <span class="subtotal-title">Subtotal:</span>
-                   <span class="subtotal-amount">$610.00</span>
-               </h3>
-               <div class="group-btn">
-                   <a href="https://new.axilthemes.com/demo/template/etrade/cart.html" class="axil-btn btn-bg-primary viewcart-btn">View Cart</a>
-                   <a href="https://new.axilthemes.com/demo/template/etrade/checkout.html" class="axil-btn btn-bg-secondary checkout-btn">Checkout</a>
-               </div>
-           </div>
-       </div>
-   </div>
+
+ <?php
+    // produtos do carrinho
+    $cart_items = WC()->cart->get_cart_contents();
+    function format_cart_items($items)
+    {
+        $cart_final = [];
+        foreach ($items as $item) {
+            $product_id = $item['product_id'];
+            $product = new WC_Product_Simple($product_id);
+            $product_name = get_the_title($product_id);
+            $product_url = get_permalink($product_id);
+            $product_image = get_the_post_thumbnail($product_id, 'thumbnail');
+            $product_price = wc_price($item['line_subtotal']);
+            $quantity = $item['quantity'];
+            $single_price = $product->get_price();
+
+            $cart_final[] = [
+                'id' => $product_id,
+                'name' => $product_name,
+                'url' => $product_url,
+                'image' => $product_image,
+                'totalprice' => $product_price,
+                'singleprice' => $single_price,
+                'quantity' => $quantity
+            ];
+        }
+
+        return $cart_final;
+    }
+
+    $cart_item_formatted = format_cart_items($cart_items);
+    //  print_r($cart_item_formatted);
+
+
+    // Cart total price
+    $cart = WC()->cart;
+    // Check if the cart is empty
+    $subtotal;
+    if ($cart->is_empty()) {
+        $subtotal = 'O Carrinho está vazio.';
+        return;
+    } else {
+        $total_price = 0;
+        foreach ($cart->get_cart_contents() as $item) {
+            $total_price += $item['line_total'] + $item['line_tax'];
+        }
+        $subtotal = wc_price($total_price);
+    }
+
+    // print_r($subtotal);
+
+    ?>
+
+
+ <div class="cart-dropdown" id="cart-dropdown">
+     <div class="cart-content-wrap">
+         <div class="cart-header">
+             <h2 class="header-title">Carrinho de Compras</h2>
+             <button class="cart-close sidebar-close"><i class="fas fa-times"></i></button>
+         </div>
+         <div class="cart-body">
+             <ul class="cart-item-list">
+                 <?php foreach ($cart_item_formatted as $item) { ?>
+                     <li class="cart-item">
+                         <div class="item-img">
+                             <a href="<?= $item['url'] ?>">
+                                 <?= $item['image'] ?>
+                             </a>
+                             <button class="close-btn"><i class="fas fa-times"></i></button>
+                         </div>
+                         <div class="item-content">
+                             <div class="product-rating">
+                                 <span class="icon">
+                                     <i class="fas fa-star"></i>
+                                     <i class="fas fa-star"></i>
+                                     <i class="fas fa-star"></i>
+                                     <i class="fas fa-star"></i>
+                                     <i class="fas fa-star"></i>
+                                 </span>
+                                 <span class="rating-number">
+                                     <?php // TODO: rating
+                                        ?>
+                                 </span>
+                             </div>
+                             <h3 class="item-title">
+                                 <a href="<?= $item['url'] ?>"><?= $item['name'] ?></a>
+                             </h3>
+                             <div class="item-price"><span class="currency-symbol"></span><?= $item['totalprice'] ?></div>
+
+
+
+
+                             <div class="pro-qty item-quantity">
+                                 <span class="dec qtybtn" onclick="removeItemCart()">-</span>
+                                 <input type="number" class="quantity-input" value="<?= $item['quantity'] ?>">
+                                 <span class="inc qtybtn" onclick="addItemCart()">+</span>
+                             </div>
+                         </div>
+                     </li>
+                 <?php } ?>
+             </ul>
+         </div>
+         <div class="cart-footer">
+             <h3 class="cart-subtotal">
+                 <span class="subtotal-title">Subtotal:</span>
+                 <span class="subtotal-amount"><?= $subtotal ?></span>
+             </h3>
+             <div class="group-btn">
+                 <a href="/carrinho/" class="axil-btn btn-bg-primary viewcart-btn">Carrinho</a>
+                 <a href="/finalizar-compra/" class="axil-btn btn-bg-secondary checkout-btn">Finalizar Compra</a>
+             </div>
+         </div>
+     </div>
+ </div>
