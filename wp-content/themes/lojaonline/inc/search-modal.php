@@ -3,77 +3,20 @@
         <button class="card-close sidebar-close"><i class="fas fa-times"></i></button>
         <div class="header-search-wrap">
             <div class="card-header">
-                <form action="https://new.axilthemes.com/demo/template/etrade/index-1.html#">
+                <form class="search-form-input" action="<?php bloginfo('url') ?>/loja/" method="get">
                     <div class="input-group">
-                        <input type="search" class="form-control" name="prod-search" id="prod-search" placeholder="Write Something....">
-                        <button type="submit" class="axil-btn btn-bg-primary"><i class="far fa-search"></i></button>
+                        <input type="text" class="form-control" name="s" id="s" placeholder="Buscar..." value="<?php the_search_query() ?>">
+                        <button type="submit" class="axil-btn btn-bg-primary">
+                            <img src="<?= get_template_directory_uri() ?>/img/icon/search.svg" height="20" width="20" alt="Search" />
+                            1
+                        </button>
+                        <input type="text" name="post_type" value="product" class="hidden" />
+
                     </div>
+                    <button type="submit" class="button-search-input" role="button">Buscar</button>
                 </form>
             </div>
-            <div class="card-body">
-                <div class="search-result-header">
-                    <h6 class="title">24 Result Found</h6>
-                    <a href="https://new.axilthemes.com/demo/template/etrade/shop.html" class="view-all">View All</a>
-                </div>
-                <div class="psearch-results">
-                    <div class="axil-product-list">
-                        <div class="thumbnail">
-                            <a href="https://new.axilthemes.com/demo/template/etrade/single-product.html">
-                                <img src="./eTrade __ Home-01_files/product-09.png" alt="Yantiti Leather Bags">
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-rating">
-                                <span class="rating-icon">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fal fa-star"></i>
-                                </span>
-                                <span class="rating-number"><span>100+</span> Reviews</span>
-                            </div>
-                            <h6 class="product-title"><a href="https://new.axilthemes.com/demo/template/etrade/single-product.html">Media Remote</a></h6>
-                            <div class="product-price-variant">
-                                <span class="price current-price">$29.99</span>
-                                <span class="price old-price">$49.99</span>
-                            </div>
-                            <div class="product-cart">
-                                <a href="https://new.axilthemes.com/demo/template/etrade/cart.html" class="cart-btn"><i class="fal fa-shopping-cart"></i></a>
-                                <a href="https://new.axilthemes.com/demo/template/etrade/wishlist.html" class="cart-btn"><i class="fal fa-heart"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="axil-product-list">
-                        <div class="thumbnail">
-                            <a href="https://new.axilthemes.com/demo/template/etrade/single-product.html">
-                                <img src="./eTrade __ Home-01_files/product-09.png" alt="Yantiti Leather Bags">
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-rating">
-                                <span class="rating-icon">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fal fa-star"></i>
-                                </span>
-                                <span class="rating-number"><span>100+</span> Reviews</span>
-                            </div>
-                            <h6 class="product-title"><a href="https://new.axilthemes.com/demo/template/etrade/single-product.html">Media Remote</a></h6>
-                            <div class="product-price-variant">
-                                <span class="price current-price">$29.99</span>
-                                <span class="price old-price">$49.99</span>
-                            </div>
-                            <div class="product-cart">
-                                <a href="https://new.axilthemes.com/demo/template/etrade/cart.html" class="cart-btn"><i class="fal fa-shopping-cart"></i></a>
-                                <a href="https://new.axilthemes.com/demo/template/etrade/wishlist.html" class="cart-btn"><i class="fal fa-heart"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
     <!-- Header Search Modal End -->

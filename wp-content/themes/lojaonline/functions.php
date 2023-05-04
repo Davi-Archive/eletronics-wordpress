@@ -79,6 +79,7 @@ function register_my_menu()
         'menu_principal' => __('Menu Principal'),
         'pagina_topo' => __('Página Topo'),
         'contato' => __('Contato'),
+        'categorias' => __('Categorias'),
         'links_rapidos' => __('Links Rápidos')
     ));
 }

@@ -11,11 +11,15 @@
                  <div class="col-lg-3 col-sm-6">
                      <div class="axil-footer-widget">
                          <h5 class="widget-title">Suporte</h5>
-                         <div class="logo mb--30">
-                             <a href="/">
-                                 <img class="light-logo" src="<?= get_template_directory_uri() ?>/img/logo.png" alt="Logo Images">
-                             </a>
-                         </div>
+
+                         <?php if (get_field('logo_footer')) : ?>
+                             <div class="logo mb--30">
+                                 <a href="/">
+                                     <img class="light-logo" src="<?= get_template_directory_uri() ?>/img/logo.png" alt="Logo Images">
+                                 </a>
+                             </div>
+                         <?php endif; ?>
+
                          <div class="inner">
                              <p><?php the_field('endereco', $contato) ?>, <br />
                                  <?php the_field('cidade', $contato) ?>, <br />

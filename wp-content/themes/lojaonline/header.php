@@ -32,12 +32,17 @@
 </head>
 
 
-<body class="sticky-header newsletter-popup-modal">
+<?php
+$cart_count = WC()->cart->get_cart_contents_count();
+?>
+
+
+<body class="sticky-header newsletter-popup-modal" <?php body_class() ?>>
 
     <?php include(TEMPLATEPATH . './inc/search-modal.php') ?>
 
     <?php include(TEMPLATEPATH . '/inc/cart-dropdown.php') ?>
-    
+
     <a href="#top" class="back-to-top" id="backto-top"><i class="fas fa-arrow-up"></i></a>
     <header class="header axil-header header-style-1">
         <div class="axil-header-top">
@@ -83,19 +88,20 @@
                             </div>
                             <ul class="mainmenu">
                                 <li class="menu-item-has-children">
-                                    <a href="/">Home</a>
+                                    <a href="#">Home</a>
                                     <ul class="axil-submenu">
-                                        <li><a href="https://new.axilthemes.com/demo/template/etrade/index-1.html">Home - Electronics</a></li>
-                                        <li><a href="https://new.axilthemes.com/demo/template/etrade/index-2.html">Home - NFT</a></li>
-                                        <li><a href="https://new.axilthemes.com/demo/template/etrade/index-3.html">Home - Fashion</a></li>
-                                        <li><a href="https://new.axilthemes.com/demo/template/etrade/index-4.html">Home - Jewellery</a></li>
-                                        <li><a href="https://new.axilthemes.com/demo/template/etrade/index-5.html">Home - Furniture</a></li>
-                                        <li><a href="https://new.axilthemes.com/demo/template/etrade/index-6.html">Home - Multipurpose</a></li>
-                                        <li><a href="https://new.axilthemes.com/demo/template/etrade-rtl/">RTL Version</a></li>
+                                        <?php
+                                        $args = array(
+                                            'menu' => 'categorias',
+                                            'theme_location' => 'categorias',
+                                            'container' => false
+                                        );
+                                        wp_nav_menu($args);
+                                        ?>
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="/loja/">Loja</a>
+                                    <a href="#">Loja</a>
                                     <ul class="axil-submenu">
                                         <li><a href="https://new.axilthemes.com/demo/template/etrade/shop-sidebar.html">Shop With Sidebar</a></li>
                                         <li><a href="https://new.axilthemes.com/demo/template/etrade/shop.html">Shop no Sidebar</a></li>
@@ -109,7 +115,7 @@
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="/paginas/">Páginas</a>
+                                    <a href="#">Páginas</a>
                                     <ul class="axil-submenu">
                                         <?php
                                         $args = array(
@@ -153,7 +159,12 @@
                             </li>
                             <li class="shopping-cart">
                                 <a href="/carrinho/" class="cart-dropdown-btn">
-                                    <span class="cart-count">0</span>
+
+                                    <?php if ($cart_count) : ?>
+                                        <span class="cart-count">
+                                            <?= $cart_count ?>
+                                        </span>
+                                    <?php endif ?>
                                     <i class="fa-solid fa-cart-shopping"></i>
                                 </a>
                             </li>
@@ -182,7 +193,7 @@
                             </li>
                             <li class="axil-mobile-toggle">
                                 <button class="menu-btn mobile-nav-toggler">
-                                    <i class="flaticon-menu-2"></i>
+                                    <i class="fa-solid fa-bars"></i>
                                 </button>
                             </li>
                         </ul>

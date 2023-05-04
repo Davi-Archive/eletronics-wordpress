@@ -6556,7 +6556,6 @@ button.axil-btn.wishlist-btn:hover:before {
   border-radius: 10px;
   padding: 40px 30px;
   width: 800px;
-  height: 575px;
   max-height: 90vh;
   overflow: auto;
 }
@@ -6580,7 +6579,7 @@ button.axil-btn.wishlist-btn:hover:before {
   padding-bottom: 30px;
 }
 .header-search-modal .card-header .form-control {
-  border: 1px solid #f1f1f1;
+  border: 1px solid #898787;
   border-radius: 6px !important;
   font-size: 15px;
   height: 55px;
