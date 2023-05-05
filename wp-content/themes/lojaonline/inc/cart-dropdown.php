@@ -15,6 +15,16 @@ function format_cart_items($items)
         $single_price = $product->get_price();
         $remove_product = wc_get_cart_remove_url($item['key']);
 
+        $add_product_cart = sprintf(
+            '<a href="%s" data-quantity="%s" class="button add_to_cart_button product_type_%s">%s</a>',
+            esc_url($product->add_to_cart_url()),
+            esc_attr(isset($quantity) ? $quantity : 1),
+            esc_attr($product->product_type),
+            esc_html('+')
+        );
+
+        print_r($add_product_cart);
+
         $cart_final[] = [
             'id' => $product_id,
             'name' => $product_name,
@@ -23,7 +33,8 @@ function format_cart_items($items)
             'totalprice' => $product_price,
             'singleprice' => $single_price,
             'quantity' => $quantity,
-            'removeurl' => $remove_product
+            'removeurl' => $remove_product,
+            'add_product' => $add_product_cart
         ];
     }
 
@@ -96,13 +107,14 @@ $data['subtotal'] = $subtotal;
                             <div class="item-price"><span class="currency-symbol"></span><?= $item['totalprice'] ?></div>
 
                             <div class="pro-qty item-quantity">
-                                Qtd:<input type="number" class="quantity-input" value="<?= $item['quantity'] ?>">
+                                    Qtd:<input disabled type="number" class="quantity-input" value="<?= $item['quantity'] ?>">
                             </div>
                         </div>
                     </li>
                 <?php } ?>
             </ul>
         </div>
+
         <div class="cart-footer">
             <h3 class="cart-subtotal">
                 <span class="subtotal-title">Subtotal:</span>
