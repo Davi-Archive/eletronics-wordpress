@@ -21,7 +21,6 @@
       axilInit.menuLinkActive();
       axilInit.headerIconToggle();
       axilInit.priceRangeSlider();
-      axilInit.quantityRanger();
       axilInit.axilSlickActivation();
       axilInit.countdownInit(".coming-countdown", "2023/10/01");
       axilInit.campaignCountdown(".campaign-countdown", "2023/10/01");
@@ -142,7 +141,7 @@
         );
       });
     },
-
+    
     shopFilterWidget: function () {
       $(".toggle-list > .title").on("click", function (e) {
         var target = $(this).parent().children(".shop-submenu");
@@ -186,7 +185,6 @@
           $(".department-megamenu")
             .removeClass("megamenu-mobile-toggle")
             .removeAttr("style");
-
         }
       }
 
@@ -233,25 +231,25 @@
       );
     },
 
-    quantityRanger: function () {
-      $(".pro-qty").prepend('<span class="dec qtybtn">-</span>');
-      $(".pro-qty").append('<span class="inc qtybtn">+</span>');
-      $(".qtybtn").on("click", function () {
-        var $button = $(this);
-        var oldValue = $button.parent().find("input").val();
-        if ($button.hasClass("inc")) {
-          var newVal = parseFloat(oldValue) + 1;
-        } else {
-          // Don't allow decrementing below zero
-          if (oldValue > 0) {
-            var newVal = parseFloat(oldValue) - 1;
-          } else {
-            newVal = 0;
-          }
-        }
-        $button.parent().find("input").val(newVal);
-      });
-    },
+    // quantityRanger: function () {
+    //   $(".pro-qty").prepend('<span class="dec qtybtn">-</span>');
+    //   $(".pro-qty").append('<span class="inc qtybtn">+</span>');
+    //   $(".qtybtn").on("click", function () {
+    //     var $button = $(this);
+    //     var oldValue = $button.parent().find("input").val();
+    //     if ($button.hasClass("inc")) {
+    //       var newVal = parseFloat(oldValue) + 1;
+    //     } else {
+    //       // Don't allow decrementing below zero
+    //       if (oldValue > 0) {
+    //         var newVal = parseFloat(oldValue) - 1;
+    //       } else {
+    //         newVal = 0;
+    //       }
+    //     }
+    //     $button.parent().find("input").val(newVal);
+    //   });
+    // },
 
     axilSlickActivation: function (e) {
       $(".owl-carousel").owlCarousel({

@@ -77,8 +77,6 @@ $data['blog_posts'] = format_post($blog_posts);
 $data['product_top_menu'] = format_products($products_topo);
 ?>
 
-
-
 <body class="sticky-header newsletter-popup-modal" <?php body_class() ?>>
 
     <?php include(TEMPLATEPATH . './inc/search-modal.php') ?>
