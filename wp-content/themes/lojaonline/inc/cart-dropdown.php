@@ -23,8 +23,6 @@ function format_cart_items($items)
             esc_html('+')
         );
 
-        print_r($add_product_cart);
-
         $cart_final[] = [
             'id' => $product_id,
             'name' => $product_name,
@@ -81,9 +79,9 @@ $data['subtotal'] = $subtotal;
                                 <?= $item['image'] ?>
                             </a>
                             <a href="<?= $item['removeurl'] ?>">
-                                <button class="close-btn remove-from-cart-button" data-product-id="<?php echo $item['id']; ?>">
+                                <!-- <button class="close-btn remove-from-cart-button" data-product-id="<?php //echo $item['id']; ?>">
                                     <i class="fas fa-times"></i>
-                                </button>
+                                </button> -->
                             </a>
                         </div>
                         <div class="item-content">

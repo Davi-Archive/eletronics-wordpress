@@ -141,7 +141,7 @@
         );
       });
     },
-    
+
     shopFilterWidget: function () {
       $(".toggle-list > .title").on("click", function (e) {
         var target = $(this).parent().children(".shop-submenu");
@@ -408,14 +408,14 @@
       });
     },
 
-    offerPopupActivation: function () {
-      if ($("body").hasClass("newsletter-popup-modal")) {
-        setTimeout(function () {
-          $("body").addClass("open");
-          $("#offer-popup-modal").addClass("open");
-        }, 1000);
-      }
-    },
+    // offerPopupActivation: function () {
+    //   if ($("body").hasClass("newsletter-popup-modal")) {
+    //     setTimeout(function () {
+    //       $("body").addClass("open");
+    //       $("#offer-popup-modal").addClass("open");
+    //     }, 1000);
+    //   }
+    // },
 
     axilMasonary: function () {
       $(".axil-isotope-wrapper").imagesLoaded(function () {

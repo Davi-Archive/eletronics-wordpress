@@ -1,27 +1,66 @@
-<?php get_header() ?>
+<?php
+get_header();
+
+$home = get_page_by_title('home');
+
+$product_banner = wc_get_products([
+    'limit' => 1,
+    'tag' => ('banner-topo-home')
+]);
+
+
+function format_products_banner_top($products)
+{
+    $products_final = [];
+    foreach ($products as $product) {
+        $product_id = $product->id;
+        $product_image = $product->get_image();
+
+        $products_final[] = [
+            'id' => $product_id,
+            'name' => $product->get_name(),
+            'link' => $product->get_permalink(),
+            'image' => $product_image
+        ];
+    }
+    return $products_final;
+}
+
+
+$banner_product = format_products_banner_top($product_banner);
+
+
+// Send data
+
+$data['banner'] = $banner_product;
+
+?>
+
+
 
 <main class="main-wrapper">
-
     <!-- Banner Header Start-->
-    <div class="axil-main-slider-area main-slider-style-1">
-        <div class="container">
-            <div class="row align-items-center" style="flex-wrap: nowrap;">
-                <div class="col-lg-5 col-sm-6">
-                    <div class="main-slider-content">
-                        <div class="slider-content-activation-one slick-initialized slick-slider">
-                            <div class="slick-list draggable">
-                                <div class="slick-track" style="opacity: 1; width: 2020px;">
-                                    <div class="single-slide slick-slide slick-current slick-active sal-animate">
-                                        <span class="subtitle">
-                                            <i class="fa-solid fa-fire"></i> Hot Deal In This Week</span>
-                                        <h1 class="title">Roco Wireless Headphone</h1>
-                                        <div class="slide-action">
-                                            <div class="shop-btn">
-                                                <a href="https://new.axilthemes.com/demo/template/etrade/shop.html" class="axil-btn btn-bg-white" tabindex="0">
-                                                    <i class="fa-solid fa-cart-shopping-fast fa-2xs"></i>
-                                                    Shop Now</a>
-                                            </div>
-                                            <div class="item-rating">
+    <?php foreach ($data['banner'] as $product) : ?>
+        <div class="axil-main-slider-area main-slider-style-1">
+            <div class="container">
+                <div class="row align-items-center" style="flex-wrap: nowrap;">
+                    <div class="col-lg-5 col-sm-6">
+                        <div class="main-slider-content">
+                            <div class="slider-content-activation-one slick-initialized slick-slider">
+                                <div class="slick-list draggable">
+                                    <div class="slick-track" style="opacity: 1; width: 2020px;">
+
+                                        <div class="single-slide slick-slide slick-current slick-active sal-animate">
+                                            <span class="subtitle">
+                                                <i class="fa-solid fa-fire"></i> Oferta Quente da Semana</span>
+                                            <h1 class="title">Roco Wireless</h1>
+                                            <div class="slide-action">
+                                                <div class="shop-btn">
+                                                    <a href="<?= $product['link'] ?>" class="axil-btn btn-bg-white" tabindex="0">
+                                                        <i class="fa-solid fa-cart-shopping-fast fa-2xs"></i>
+                                                        Comprar Agora</a>
+                                                </div>
+                                                <!-- <div class="item-rating">
                                                 <div class="thumb">
                                                     <ul>
                                                         <li><img src="<?= get_template_directory_uri() ?>/img/author1.png" alt="Author"></li>
@@ -42,34 +81,37 @@
                                                         <span>100+</span> Reviews
                                                     </span>
                                                 </div>
+                                            </div> -->
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Banner Header End-->
+                    <!-- Banner Header End-->
 
-                <div class="slider-thumb-activation-one axil-slick-dots slick-initialized slick-slider slick-dotted main-slider-large-thumb">
-                    <div class="single-slide slick-slide slick-cloned .slick-track" style="width: 60%;">
-                        <img src="<?= get_template_directory_uri() ?>/img/product-38.png" alt="Product">
-                        <div class="product-price">
-                            <span class="text">From</span>
-                            <span class="price-amount">$49.00</span>
+                    <div class="slider-thumb-activation-one axil-slick-dots slick-initialized slick-slider slick-dotted main-slider-large-thumb">
+                        <div class="single-slide slick-slide slick-cloned .slick-track" style="width: 60%;">
+                            <img src="<?php the_field('imagem_banner_topo', $home) ?>" alt="<?= $product['name'] ?>">
+                            <div class="product-price">
+                                <span class="text">From</span>
+                                <span class="price-amount">$49.00</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <ul class="shape-group">
+                <li class="shape-1">
+                    <img src="<?= get_template_directory_uri() ?>/img/shape-1.png" alt="Shape">
+                </li>
+                <li class="shape-2"><img src="<?= get_template_directory_uri() ?>/img/shape-2.png" alt="Shape"></li>
+            </ul>
         </div>
-        <ul class="shape-group">
-            <li class="shape-1"><img src="<?= get_template_directory_uri() ?>/img/shape-1.png" alt="Shape"></li>
-            <li class="shape-2"><img src="<?= get_template_directory_uri() ?>/img/shape-2.png" alt="Shape"></li>
-        </ul>
-    </div>
-
+    <?php endforeach; ?>
 
     <!-- Start Categorie Area  -->
     <div class="axil-categorie-area bg-color-white axil-section-gapcommon">

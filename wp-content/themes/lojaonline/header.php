@@ -56,8 +56,10 @@ function format_products($products)
 $product_top_menu = format_products($products_topo);
 
 // Pegar posts do blog
-
-$blog_posts = get_posts();
+$args_posts = [
+    'numberposts' => 6
+];
+$blog_posts = get_posts($args_posts);
 
 function format_post($posts)
 {
