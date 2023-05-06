@@ -20,6 +20,7 @@ function format_products_banner_top($products)
             'id' => $product_id,
             'name' => $product->get_name(),
             'link' => $product->get_permalink(),
+            'price' => $product->get_price(),
             'image' => $product_image
         ];
     }
@@ -93,12 +94,12 @@ $data['banner'] = $banner_product;
 
                     <!-- Banner Header End-->
 
-                    <div class="slider-thumb-activation-one axil-slick-dots slick-initialized slick-slider slick-dotted main-slider-large-thumb">
-                        <div class="single-slide slick-slide slick-cloned .slick-track" style="width: 60%;">
+                    <div class="main-slider-large-thumb">
+                        <div class="single-slide">
                             <img src="<?php the_field('imagem_banner_topo', $home) ?>" alt="<?= $product['name'] ?>">
                             <div class="product-price">
-                                <span class="text">From</span>
-                                <span class="price-amount">$49.00</span>
+                                <span class="text">Por</span>
+                                <span class="price-amount">R$ <?= $product['price'] ?></span>
                             </div>
                         </div>
                     </div>
@@ -165,63 +166,7 @@ $data['banner'] = $banner_product;
     </div>
     <!-- End Categorie Area  -->
 
-    <!-- Poster Countdown Area  -->
-    <div class="axil-poster-countdown">
-        <div class="container">
-            <div class="poster-countdown-wrap bg-lighter">
-                <div class="row">
-                    <div class="col-xl-5 col-lg-6">
-                        <div class="poster-countdown-content">
-                            <div class="section-title-wrapper">
-                                <span class="title-highlighter highlighter-secondary"> <i class="fal fa-headphones-alt"></i> Don’t Miss!!</span>
-                                <h2 class="title">Enhance Your Music Experience</h2>
-                            </div>
-                            <div class="poster-countdown countdown mb--40">
-                                <div class="countdown-section">
-                                    <div>
-                                        <div class="countdown-number">0</div>
-                                        <div class="countdown-unit">Day</div>
-                                    </div>
-                                </div>
-                                <div class="countdown-section">
-                                    <div>
-                                        <div class="countdown-number">00</div>
-                                        <div class="countdown-unit">Hrs</div>
-                                    </div>
-                                </div>
-                                <div class="countdown-section">
-                                    <div>
-                                        <div class="countdown-number">00</div>
-                                        <div class="countdown-unit">Min</div>
-                                    </div>
-                                </div>
-                                <div class="countdown-section">
-                                    <div>
-                                        <div class="countdown-number">00</div>
-                                        <div class="countdown-unit">Sec</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#" class="axil-btn btn-bg-primary">Check it Out!</a>
-                        </div>
-                    </div>
-                    <div class="col-xl-7 col-lg-6">
-                        <div class="poster-countdown-thumbnail">
-                            <img src="<?= get_template_directory_uri() ?>/img/poster-03.png" alt="Poster Product">
-                            <div class="music-singnal">
-                                <div class="item-circle circle-1"></div>
-                                <div class="item-circle circle-2"></div>
-                                <div class="item-circle circle-3"></div>
-                                <div class="item-circle circle-4"></div>
-                                <div class="item-circle circle-5"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Poster Countdown Area  -->
+    <?php include(TEMPLATEPATH . '/inc/home/countdown.php'); ?>
 
     <!-- Start Expolre Product Area  -->
     <div class="axil-product-area bg-color-white axil-section-gap">
@@ -680,98 +625,10 @@ $data['banner'] = $banner_product;
     </div>
     <!-- End Most Sold Product Area  -->
 
-    <!-- Start Why Choose Area  -->
-    <div class="axil-why-choose-area pb--50 pb_sm--30">
-        <div class="container">
-            <div class="section-title-wrapper section-title-center">
-                <span class="title-highlighter highlighter-secondary"><i class="fa-solid fa-thumbs-up"></i>Why Us</span>
-                <h2 class="title">Why People Choose Us</h2>
-            </div>
-            <div class="row row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 row--20">
-                <div class="col">
-                    <div class="service-box">
-                        <div class="icon">
-                            <img src="<?= get_template_directory_uri() ?>/img/service6.png" alt="Service">
-                        </div>
-                        <h6 class="title">Fast &amp; Secure Delivery</h6>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="service-box">
-                        <div class="icon">
-                            <img src="<?= get_template_directory_uri() ?>/img/service7.png" alt="Service">
-                        </div>
-                        <h6 class="title">100% Guarantee On Product</h6>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="service-box">
-                        <div class="icon">
-                            <img src="<?= get_template_directory_uri() ?>/img/service8.png" alt="Service">
-                        </div>
-                        <h6 class="title">24 Hour Return Policy</h6>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="service-box">
-                        <div class="icon">
-                            <img src="<?= get_template_directory_uri() ?>/img/service9.png" alt="Service">
-                        </div>
-                        <h6 class="title">24 Hour Return Policy</h6>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="service-box">
-                        <div class="icon">
-                            <img src="<?= get_template_directory_uri() ?>/img/service10.png" alt="Service">
-                        </div>
-                        <h6 class="title">Next Level Pro Quality</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Why Choose Area  -->
+    <?php include(TEMPLATEPATH . '/inc/home/why-choose.php')  ?>
 
+    <?php include(TEMPLATEPATH . '/inc/home/product-poster.php')  ?>
 
-    <!-- Start Axil Product Poster Area  -->
-    <div class="axil-poster">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 mb--30">
-                    <div class="single-poster">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/shop.html">
-                            <img src="<?= get_template_directory_uri() ?>/img/poster-01.png" alt="eTrade promotion poster">
-                            <div class="poster-content">
-                                <div class="inner">
-                                    <h3 class="title">Rich sound, <br> for less.</h3>
-                                    <span class="sub-title">Collections <i class="fas fa-long-arrow-right"></i></span>
-                                </div>
-                            </div>
-                            <!-- End .poster-content -->
-                        </a>
-                    </div>
-                    <!-- End .single-poster -->
-                </div>
-                <div class="col-lg-6 mb--30">
-                    <div class="single-poster">
-                        <a href="https://new.axilthemes.com/demo/template/etrade/shop-sidebar.html">
-                            <img src="<?= get_template_directory_uri() ?>/img/poster-02.png" alt="eTrade promotion poster">
-                            <div class="poster-content content-left">
-                                <div class="inner">
-                                    <span class="sub-title">50% Offer In Winter</span>
-                                    <h3 class="title">Get VR <br> Reality Glass</h3>
-                                </div>
-                            </div>
-                            <!-- End .poster-content -->
-                        </a>
-                    </div>
-                    <!-- End .single-poster -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Axil Product Poster Area  -->
 
     <!-- Start Axil Newsletter Area  -->
     <?php if (get_field('mostrar_newsletter')) : ?>
@@ -798,57 +655,9 @@ $data['banner'] = $banner_product;
 </main>
 
 
-<div class="service-area">
-    <div class="container">
-        <div class="row row-cols-xl-4 row-cols-sm-2 row-cols-1 row--20">
-            <div class="col">
-                <div class="service-box service-style-2">
-                    <div class="icon">
-                        <img src="<?= get_template_directory_uri() ?>/img/service1.png" alt="Service">
-                    </div>
-                    <div class="content">
-                        <h6 class="title">Envio Rápido &amp; Segurança</h6>
-                        <p>Envio rápido principalmente para locais próximos.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="service-box service-style-2">
-                    <div class="icon">
-                        <img src="<?= get_template_directory_uri() ?>/img/service2.png" alt="Service">
-                    </div>
-                    <div class="content">
-                        <h6 class="title">Devolução garantida</h6>
-                        <p>Dinheiro devolta em até 10 dias.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="service-box service-style-2">
-                    <div class="icon">
-                        <img src="<?= get_template_directory_uri() ?>/img/service3.png" alt="Service">
-                    </div>
-                    <div class="content">
-                        <h6 class="title">Devolução em 24 horas</h6>
-                        <p>Nenhum questão será peguntada.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="service-box service-style-2">
-                    <div class="icon">
-                        <img src="<?= get_template_directory_uri() ?>/img/service4.png" alt="Service">
-                    </div>
-                    <div class="content">
-                        <h6 class="title">Suporte de Qualidade</h6>
-                        <p>Online 24/7.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<?php include(TEMPLATEPATH . '/inc/home/service-garanteed.php'); ?>
 
+<!-- MODALS -->
 
 <?php include(TEMPLATEPATH . './inc/quickview-modal.php') ?>
 

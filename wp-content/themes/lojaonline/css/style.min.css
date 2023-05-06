@@ -4135,6 +4135,7 @@ button.axil-btn.wishlist-btn:hover:before {
 }
 .main-slider-large-thumb .single-slide {
   position: relative;
+  width: 60%;
 }
 .main-slider-large-thumb .single-slide img {
   display: inline-block;
@@ -4171,7 +4172,7 @@ button.axil-btn.wishlist-btn:hover:before {
   font-weight: 700;
   color: var(--color-primary);
 }
-.main-slider-large-thumb .single-slide.slick-current .product-price {
+.main-slider-large-thumb .single-slide .product-price {
   visibility: visible;
   opacity: 1;
   transform: scale(1);

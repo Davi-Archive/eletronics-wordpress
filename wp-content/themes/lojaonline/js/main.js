@@ -22,10 +22,6 @@
       axilInit.headerIconToggle();
       axilInit.priceRangeSlider();
       axilInit.axilSlickActivation();
-      axilInit.countdownInit(".coming-countdown", "2023/10/01");
-      axilInit.campaignCountdown(".campaign-countdown", "2023/10/01");
-      axilInit.countdownInit(".poster-countdown", "2023/10/01");
-      axilInit.countdownInit(".sale-countdown", "2023/10/31");
       axilInit.sideOffcanvasToggle(".cart-dropdown-btn", "#cart-dropdown");
       axilInit.sideOffcanvasToggle(".mobile-nav-toggler", ".header-main-nav");
       axilInit.sideOffcanvasToggle(
@@ -38,6 +34,10 @@
         ".popup-close, .closeMask",
         "#offer-popup-modal"
       );
+      axilInit.countdownInit(".coming-countdown", promotionEnd.date);
+      axilInit.campaignCountdown(".campaign-countdown", promotionEnd.date);
+      axilInit.countdownInit(".poster-countdown", promotionEnd.date);
+      axilInit.countdownInit(".sale-countdown", promotionEnd.date);
       axilInit.stickyHeaderMenu();
       axilInit.salActivation();
       axilInit.magnificPopupActivation();
@@ -98,7 +98,6 @@
         });
       });
     },
-
     counterUpActivation: function () {
       var _counter = $(".count");
       if (_counter.length) {
@@ -106,6 +105,32 @@
           delay: 10,
           time: 1000,
           triggerOnce: true,
+        });
+      }
+    },
+
+    countdownInit: function (countdownSelector, countdownTime) {
+      var eventCounter = $(countdownSelector);
+      if (eventCounter.length) {
+        eventCounter.countdown(countdownTime, function (e) {
+          $(this).html(
+            e.strftime(
+              "<div class='countdown-section'><div><div class='countdown-number'>%-D</div> <div class='countdown-unit'>Day</div> </div></div><div class='countdown-section'><div><div class='countdown-number'>%H</div> <div class='countdown-unit'>Hrs</div> </div></div><div class='countdown-section'><div><div class='countdown-number'>%M</div> <div class='countdown-unit'>Min</div> </div></div><div class='countdown-section'><div><div class='countdown-number'>%S</div> <div class='countdown-unit'>Sec</div> </div></div>"
+            )
+          );
+        });
+      }
+    },
+
+    campaignCountdown: function (countdownSelector, countdownTime) {
+      var eventCounter = $(countdownSelector);
+      if (eventCounter.length) {
+        eventCounter.countdown(countdownTime, function (e) {
+          $(this).html(
+            e.strftime(
+              "<div class='countdown-section'><div><div class='countdown-number'>%-D</div> <div class='countdown-unit'>D</div> </div></div><div class='countdown-section'><div><div class='countdown-number'>%H</div> <div class='countdown-unit'>H</div> </div></div><div class='countdown-section'><div><div class='countdown-number'>%M</div> <div class='countdown-unit'>M</div> </div></div><div class='countdown-section'><div><div class='countdown-number'>%S</div> <div class='countdown-unit'>S</div> </div></div>"
+            )
+          );
         });
       }
     },
@@ -230,6 +255,32 @@
           $("#slider-range").slider("values", 1)
       );
     },
+
+    // countdownInit: function (countdownSelector, countdownTime) {
+    //   var eventCounter = $(countdownSelector);
+    //   if (eventCounter.length) {
+    //     eventCounter.countdown(countdownTime, function (e) {
+    //       $(this).html(
+    //         e.strftime(
+    //           "<div class='countdown-section'><div><div class='countdown-number'>%-D</div> <div class='countdown-unit'>Day</div> </div></div><div class='countdown-section'><div><div class='countdown-number'>%H</div> <div class='countdown-unit'>Hrs</div> </div></div><div class='countdown-section'><div><div class='countdown-number'>%M</div> <div class='countdown-unit'>Min</div> </div></div><div class='countdown-section'><div><div class='countdown-number'>%S</div> <div class='countdown-unit'>Sec</div> </div></div>"
+    //         )
+    //       );
+    //     });
+    //   }
+    // },
+
+    // campaignCountdown: function (countdownSelector, countdownTime) {
+    //   var eventCounter = $(countdownSelector);
+    //   if (eventCounter.length) {
+    //     eventCounter.countdown(countdownTime, function (e) {
+    //       $(this).html(
+    //         e.strftime(
+    //           "<div class='countdown-section'><div><div class='countdown-number'>%-D</div> <div class='countdown-unit'>D</div> </div></div><div class='countdown-section'><div><div class='countdown-number'>%H</div> <div class='countdown-unit'>H</div> </div></div><div class='countdown-section'><div><div class='countdown-number'>%M</div> <div class='countdown-unit'>M</div> </div></div><div class='countdown-section'><div><div class='countdown-number'>%S</div> <div class='countdown-unit'>S</div> </div></div>"
+    //         )
+    //       );
+    //     });
+    //   }
+    // },
 
     // quantityRanger: function () {
     //   $(".pro-qty").prepend('<span class="dec qtybtn">-</span>');

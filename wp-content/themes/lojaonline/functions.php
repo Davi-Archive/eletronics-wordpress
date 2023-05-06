@@ -58,6 +58,8 @@ function register_code()
 
     wp_enqueue_script('waypoints', get_template_directory_uri() . '/js/waypoints.min.js', array(), null, true);
 
+
+    // variables for main
     wp_enqueue_script(
         'main',
         get_template_directory_uri() . '/js/main.js',
@@ -65,6 +67,19 @@ function register_code()
         null,
         true
     );
+
+    $home = get_page_by_title('home');
+    $dynamic_date = get_field('promocao_acaba', $home);
+    $promotion_end = array(
+        'date' => $dynamic_date
+    );
+
+    wp_localize_script(
+        'main',
+        'promotionEnd',
+        $promotion_end
+    );
+    // end main variables
 
     wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/cd8a4ed1bd.js', array(), null, true);
 
