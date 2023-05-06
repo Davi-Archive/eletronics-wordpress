@@ -25,6 +25,12 @@ Theme name: Loja Online
 .new-arrivals-product-area {
   height: 550px;
 }
+
+.most-sold-product-image{
+  width:126px;
+  height:126px;
+}
+
 /*
 
 .owl-nav {
