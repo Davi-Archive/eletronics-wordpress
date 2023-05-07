@@ -111,7 +111,7 @@ $data['categories'] = $categories_formatted;
                                         <div class="single-slide slick-slide slick-current slick-active sal-animate">
                                             <span class="subtitle">
                                                 <i class="fa-solid fa-fire"></i> Oferta Quente da Semana</span>
-                                            <h1 class="title">Roco Wireless</h1>
+                                            <h1 class="title"><?= $product['name'] ?></h1>
                                             <div class="slide-action">
                                                 <div class="shop-btn">
                                                     <a href="<?= $product['link'] ?>" class="axil-btn btn-bg-white" tabindex="0">
@@ -156,7 +156,7 @@ $data['categories'] = $categories_formatted;
                             <img src="<?php the_field('imagem_banner_topo', $home) ?>" alt="<?= $product['name'] ?>">
                             <div class="product-price">
                                 <span class="text">Por</span>
-                                <span class="price-amount"><?= $product['price'] ?></span>
+                                <span class="price-amount">R$<?= $product['price'] ?></span>
                             </div>
                         </div>
                     </div>
@@ -208,7 +208,7 @@ $data['categories'] = $categories_formatted;
 
                     <?php foreach ($data['products_explore'] as $product) :  ?>
 
-                        <div class="product-explore">
+                        <div class="product-explore-list">
                             <a href="<?= $product['link'] ?>">
                                 <div class="axil-product thumbnail">
                                     <a href="<?= $product['link'] ?>" tabindex="-1">

@@ -1,7 +1,6 @@
 /*
 Theme name: Loja Online
 */
-
 @import "./css/base.css";
 @import "./css/bootstrap.min.css";
 @import "./css/flaticon.css";
@@ -15,6 +14,18 @@ Theme name: Loja Online
 @import "./css/owl.carousel.min.css";
 @import "./css/owl.theme.default.min.css";
 
+
+.product-explore-list .product-content .product-price-variant {
+    font-size: 20px;
+    font-weight: 700;
+    color: #292930;
+}
+
+.product-explore-list .product-content .product-price-variant .price.old-price {
+    color: #d6d6d6;
+    text-decoration: line-through;
+    margin-left: 10px;
+}
 .product-new-arrival-single .owl-stage-outer .owl-stage .owl-item {
   display: flex;
   width: 210px !important;
@@ -62,7 +73,6 @@ Theme name: Loja Online
   top: -200px;
 }
 */
-
 .hidden {
   display: none !important;
 }
@@ -90,8 +100,7 @@ Theme name: Loja Online
   text-decoration: none;
   transition: all 0.5s ease-in-out;
 }
-.section-not-found #errorLink:hover,
-.section-not-found #errorLink:active {
+.section-not-found #errorLink:hover, .section-not-found #errorLink:active {
   color: #fff;
   background: #000;
 }
@@ -139,7 +148,6 @@ Theme name: Loja Online
     transform: rotate(0);
   }
 }
-
 @keyframes an1 {
   0% {
     transform: rotate(0);
@@ -178,7 +186,6 @@ Theme name: Loja Online
     transform: rotate(0);
   }
 }
-
 .search-form-input {
   display: flex;
 }
@@ -193,8 +200,7 @@ Theme name: Loja Online
   color: #ffffff;
   cursor: pointer;
   display: inline-block;
-  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
@@ -212,16 +218,13 @@ Theme name: Loja Online
   width: 50%;
   will-change: transform;
 }
-
 .button-search-input:disabled {
   pointer-events: none;
 }
-
 .button-search-input:hover {
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
 }
-
 .button-search-input:active {
   box-shadow: none;
   transform: translateY(0);
