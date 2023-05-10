@@ -188,7 +188,6 @@ $data['categories'] = $categories_formatted;
                                 <h6 class="cat-title"><?= $category['name'] ?></h6>
                             </a>
                         </div>
-                        <!-- End .categrie-product -->
                     </div>
                 <?php endforeach; ?>
             </div>
