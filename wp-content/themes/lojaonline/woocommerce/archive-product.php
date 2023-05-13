@@ -61,8 +61,6 @@ else : endif; ?>
     <?php
     endif;
     ?>
-
-
   </main>
 </article>
 
