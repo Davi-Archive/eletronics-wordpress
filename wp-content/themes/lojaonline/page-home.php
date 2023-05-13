@@ -24,28 +24,9 @@ function format_categories_section($categories)
     return $categories_final;
 }
 
-$categories_formatted = format_categories_section($retrieved_categories);
+$categories_formatted = format_categories_section($retrieved_categories, null);
 
 
-// PRODUCT UTILS
-function format_products_utils_homepage($products)
-{
-    $products_final = [];
-    foreach ($products as $product) {
-        $product_id = $product->id;
-        $product_image = $product->get_image();
-
-        $products_final[] = [
-            'id' => $product_id,
-            'name' => $product->get_name(),
-            'link' => $product->get_permalink(),
-            'price' => $product->get_regular_price(),
-            'sale_price' => $product->get_sale_price(),
-            'image' => $product_image
-        ];
-    }
-    return $products_final;
-}
 
 // Product banner
 
@@ -56,7 +37,7 @@ $product_banner = wc_get_products([
 ]);
 
 
-$banner_product = format_products_utils_homepage($product_banner);
+$banner_product = format_products_utils_homepage($product_banner,null);
 
 
 // Products Explore
@@ -65,7 +46,7 @@ $products_explore = wc_get_products([
     'orderby' => 'DESC'
 ]);
 
-$products_explore_formatted = format_products_utils_homepage($products_explore);
+$products_explore_formatted = format_products_utils_homepage($products_explore, null);
 
 // New Products from store
 $products_new = wc_get_products([
@@ -74,7 +55,7 @@ $products_new = wc_get_products([
     'order' => 'DESC',
 ]);
 
-$products_new_formatted = format_products_utils_homepage($products_new);
+$products_new_formatted = format_products_utils_homepage($products_new, null);
 
 // Most sold products from store
 
@@ -83,7 +64,7 @@ $products_sold = wc_get_products([
     'orderby' => 'rand'
 ]);
 
-$products_most_sold_formatted = format_products_utils_homepage($products_sold);
+$products_most_sold_formatted = format_products_utils_homepage($products_sold, null);
 // Send data
 
 $data['banner'] = $banner_product;
@@ -94,11 +75,7 @@ $data['categories'] = $categories_formatted;
 
 ?>
 
-
-
 <main class="main-wrapper">
-
-
     <!-- Start Categorie Area  -->
     <div class="axil-categorie-area bg-color-white axil-section-gapcommon">
         <div class="container">

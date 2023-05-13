@@ -115,3 +115,27 @@ function cafe_loop_shop_per_page()
     return 6;
 }
 add_filter('loop_shop_per_page', 'cafe_loop_shop_per_page');
+
+
+// PRODUCT UTILS
+function format_products_utils_homepage($products, $img_size = 'medium')
+{
+    $products_final = [];
+    foreach ($products as $product) {
+        $product_id = $product->id;
+        $product_image = $product->get_image();
+        if ($img_size != null) {
+            $product_image = wp_get_attachment_image_src($product->get_image_id(), $img_size)[0];
+        }
+
+        $products_final[] = [
+            'id' => $product_id,
+            'name' => $product->get_name(),
+            'link' => $product->get_permalink(),
+            'price' => $product->get_regular_price(),
+            'sale_price' => $product->get_sale_price(),
+            'image' => $product_image
+        ];
+    }
+    return $products_final;
+}
