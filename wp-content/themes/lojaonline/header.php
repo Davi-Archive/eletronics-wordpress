@@ -35,7 +35,6 @@
 $cart_count = WC()->cart->get_cart_contents_count();
 
 // Pegar produtos e formatar
-
 $products_topo = wc_get_products([
     'limit' => 6,
     'tag' => ('menu-topo')
