@@ -7,36 +7,35 @@ function product_list_archive_product($products)
     <div class="col-xl-3 col-lg-4 col-sm-6">
       <div class="axil-product product-style-one has-color-pick mt--40">
         <div class="thumbnail">
-          <a href="https://new.axilthemes.com/demo/template/etrade/single-product.html">
-            <img src="<?= get_template_directory_uri() ?>/product-01.png" alt="Product Images">
+          <a href="<?= $product['link'] ?>">
+            <img src="<?= $product['image'] ?>" alt="<?= $product['name'] ?>">
           </a>
           <div class="label-block label-right">
-            <div class="product-badget">20% OFF</div>
+            <div class="product-badget">20% DESCONTO</div>
           </div>
           <div class="product-hover-action">
             <ul class="cart-action">
-              <li class="wishlist"><a href="https://new.axilthemes.com/demo/template/etrade/wishlist.html"><i class="far fa-heart"></i></a></li>
-              <li class="select-option"><a href="https://new.axilthemes.com/demo/template/etrade/cart.html">Add to Cart</a></li>
-              <li class="quickview"><a href="https://new.axilthemes.com/demo/template/etrade/shop.html#" data-bs-toggle="modal" data-bs-target="#quick-view-modal"><i class="far fa-eye"></i></a></li>
+              <li class="wishlist"><a href="<?= $product['link'] ?>"><i class="fas fa-heart"></i></a></li>
+              <li class="select-option"><a href="<?= $product['link'] ?>">Comprar</a></li>
+              <li class="quickview"><a href="<?= $product['link'] ?>" data-bs-toggle="modal" data-bs-target="#quick-view-modal"><i class="fas fa-eye"></i></a></li>
             </ul>
           </div>
         </div>
         <div class="product-content">
           <div class="inner">
-            <h5 class="title"><a href="https://new.axilthemes.com/demo/template/etrade/single-product.html">3D™ wireless headset</a></h5>
+            <h5 class="title"><a href="<?= $product['link'] ?>"><?= $product['name'] ?></a></h5>
             <div class="product-price-variant">
-              <span class="price current-price">$30</span>
-              <span class="price old-price">$30</span>
-            </div>
-            <div class="color-variant-wrapper">
-              <ul class="color-variant">
-                <li class="color-extra-01 active"><span><span class="color"></span></span>
-                </li>
-                <li class="color-extra-02"><span><span class="color"></span></span>
-                </li>
-                <li class="color-extra-03"><span><span class="color"></span></span>
-                </li>
-              </ul>
+              <?php
+              if ($product['sale_price']) : ?>
+                <span class="price old-price">R$<?= $product['price'] ?></span>
+                <span class="price current-price">
+                  R$<?= $product['sale_price'] ?>
+                </span>
+              <?php else : ?>
+                <span class="price current-price">
+                  R$<?= $product['price'] ?>
+                </span>
+              <?php endif ?>
             </div>
           </div>
         </div>
@@ -58,13 +57,14 @@ if (have_posts()) : while (have_posts()) : the_post();
 
 <?php endwhile;
 else : endif; ?>
-<div class="container_breadcrumb">
-  <?php woocommerce_breadcrumb(['delimiter' => '>']) ?>
-</div>
+
 
 <!-- Start Shop Area  -->
 <div class="axil-shop-area axil-section-gap bg-color-white">
   <div class="container">
+    <div class="container_breadcrumb">
+      <?php woocommerce_breadcrumb(['delimiter' => '>']) ?>
+    </div>
     <div class="row">
       <div class="col-lg-12">
         <div class="axil-shop-top">
@@ -122,16 +122,14 @@ else : endif; ?>
     </div>
     <div class="row row--15">
       <?php if ($data['products'] != null) :
-        product_list_archive_product($data['products']);
-        get_the_posts_pagination();
-      else : ?>
+        product_list_archive_product($data['products']); ?>
+
+        <?= get_the_posts_pagination() ?>
+      <?php else : ?>
         <p>Nenhum resultado encontrado para sua busca.</p>
       <?php
       endif;
       ?>
-    </div>
-    <div class="text-center pt--30">
-      <a href="https://new.axilthemes.com/demo/template/etrade/shop.html#" class="axil-btn btn-bg-lighter btn-load-more">Load more</a>
     </div>
   </div>
   <!-- End .container -->
