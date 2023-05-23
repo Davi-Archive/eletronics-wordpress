@@ -140,3 +140,16 @@ function format_products_utils_homepage($products, $img_size = 'medium')
     }
     return $products_final;
 }
+
+// Body class remove
+function remove_some_body_class($classes)
+{
+    $woo_class = array_search('woocommerce', $classes);
+    $woopage_class = array_search('woocommerce-page', $classes);
+    if ($woo_class && $woopage_class) {
+        unset($classes[$woo_class]);
+        unset($classes[$woopage_class]);
+    }
+    return $classes;
+}
+add_filter('body_class', 'remove_some_body_class');

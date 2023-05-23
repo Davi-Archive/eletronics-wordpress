@@ -67,9 +67,22 @@ else : endif; ?>
     </div>
 
     <div class="container-archive-product">
+      <div class="produtos-container row row--15">
+        <?php
+        echo woocommerce_catalog_ordering();
+        if ($data['products'] != null) :
+          product_list_archive_product($data['products']);
+          echo get_the_posts_pagination();
+        ?>
+        <?php else : ?>
+          <p>Nenhum resultado encontrado para sua busca.</p>
+        <?php
+        endif;
+        ?>
+      </div>
       <nav class="filtros-container">
         <div class="filtro-menu-parte">
-          <h3 class="categorias-titulo">Categorias</h3>
+          <h3 class="filtro-titulo">Categorias</h3>
           <?php
           wp_nav_menu([
             'menu' => 'categorias_internas',
@@ -89,19 +102,35 @@ else : endif; ?>
           }
           ?>
         </div>
+        <div class="filtro-menu-parte">
+          <h3 class="filtro-titulo">Filtrar por Preço</h3>
+          <form>
+            <div class="filtrar-precos-linha">
+              <label class="margin-auto" for="min_price">De R$</label>
+              <input type="number" required name="min_price" id="min_price" value="
+             <?php
+              echo isset(
+                $_GET['min_price']
+              ) ?
+                $_GET['min_price'] : 0;
+              ?>
+              ">
+            </div>
+            <div class="filtrar-precos-linha">
+              <label class="margin-auto" for="max_price">De R$</label>
+              <input type="number" required name="max_price" id="max_price" value="
+             <?php
+              echo isset(
+                $_GET['max_price']
+              ) ?
+                $_GET['max_price'] : 0;
+              ?>
+              ">
+            </div>
+            <button type="submit" class="">Filtrar</button>
+          </form>
+        </div>
       </nav>
-      <div class="produtos-container row row--15">
-        <?php if ($data['products'] != null) :
-          product_list_archive_product($data['products']); ?>
-
-          <?= get_the_posts_pagination() ?>
-        <?php else : ?>
-          <p>Nenhum resultado encontrado para sua busca.</p>
-        <?php
-        endif;
-        ?>
-      </div>
-
     </div>
   </div>
   <!-- End .container -->
