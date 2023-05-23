@@ -146,7 +146,10 @@ function remove_some_body_class($classes)
 {
     $woo_class = array_search('woocommerce', $classes);
     $woopage_class = array_search('woocommerce-page', $classes);
-    if ($woo_class && $woopage_class) {
+    $search = in_array('archive', $classes) ||
+        in_array('product-template-default', $classes);
+
+    if ($woo_class && $woopage_class && $search) {
         unset($classes[$woo_class]);
         unset($classes[$woopage_class]);
     }
