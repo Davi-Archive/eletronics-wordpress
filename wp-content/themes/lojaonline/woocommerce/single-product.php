@@ -1,6 +1,9 @@
 <?php get_header() ?>
 
 <?php
+
+$data = [];
+
 function format_single_product($id, $img_size = 'medium')
 {
     $product = wc_get_product($id);
@@ -8,8 +11,12 @@ function format_single_product($id, $img_size = 'medium')
     $gallery_ids = $product->get_gallery_image_ids();
     $gallery = [];
     if ($gallery_ids) {
+        $count = 0;
         foreach ($gallery_ids as $image_id) {
-            $gallery[] = wp_get_attachment_image_src($image_id, $img_size)[0];
+            if ($count < 2) {
+                $gallery[] = wp_get_attachment_image_src($image_id, $img_size)[0];
+                $count++;
+            }
         }
     }
 
@@ -110,89 +117,21 @@ if (have_posts()) : while (have_posts()) : the_post();
                                                 </ul>
                                                 <p class="description"><?= $single_product['description'] ?></p>
 
-                                                <div class="product-variations-wrapper">
-
-                                                    <!-- Start Product Variation  -->
-                                                    <!-- <div class="product-variation">
-                                                <h6 class="title">Colors:</h6>
-                                                <div class="color-variant-wrapper">
-                                                    <ul class="color-variant">
-                                                        <li class="color-extra-01 active"><span><span class="color"></span></span>
-                                                        </li>
-                                                        <li class="color-extra-02"><span><span class="color"></span></span>
-                                                        </li>
-                                                        <li class="color-extra-03"><span><span class="color"></span></span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div> -->
-                                                    <!-- End Product Variation  -->
-
-                                                    <!-- Start Product Variation  -->
-                                                    <div class="product-variation product-size-variation">
-                                                        <h6 class="title">Size:</h6>
-                                                        <ul class="range-variant">
-                                                            <li>xs</li>
-                                                            <li>s</li>
-                                                            <li>m</li>
-                                                            <li>l</li>
-                                                            <li>xl</li>
-                                                        </ul>
-                                                    </div>
-                                                    <!-- End Product Variation  -->
-
-                                                </div>
 
                                                 <!-- Start Product Action Wrapper  -->
                                                 <div class="product-action-wrapper d-flex-center">
-                                                    <!-- Start Quentity Action  -->
-                                                    <div class="pro-qty mr--20"><span class="dec qtybtn">-</span><input type="text" value="1"><span class="inc qtybtn">+</span></div>
-                                                    <!-- End Quentity Action  -->
 
                                                     <!-- Start Product Action  -->
-                                                    <ul class="product-action d-flex-center mb--0">
-                                                        <li class="add-to-cart"><a href="https://new.axilthemes.com/demo/template/etrade/cart.html" class="axil-btn btn-bg-primary">Adicionar ao Carrinho</a></li>
-                                                        <li class="wishlist"><a href="https://new.axilthemes.com/demo/template/etrade/wishlist.html" class="axil-btn wishlist-btn"><i class="fas fa-heart"></i></a></li>
-                                                    </ul>
+                                                    <div class="product-action d-flex-center mb--0">
+                                                        <?php woocommerce_template_single_add_to_cart() ?>
+
+
+                                                    </div>
                                                     <!-- End Product Action  -->
 
                                                 </div>
                                                 <!-- End Product Action Wrapper  -->
 
-                                                <div class="product-desc-wrapper pt--80 pt_sm--60">
-                                                    <h4 class="primary-color mb--40 desc-heading">Description</h4>
-                                                    <div class="single-desc mb--30">
-                                                        <h5 class="title">Specifications:</h5>
-                                                        <p>We’ve created a full-stack structure for our working workflow processes, were from the funny the century initial all the made, have spare to negatives. But the structure was from the funny the century rather,
-                                                            initial all the made, have spare to negatives.</p>
-                                                    </div>
-                                                    <div class="single-desc mb--5">
-                                                        <h5 class="title">Care &amp; Maintenance:</h5>
-                                                        <p>Use warm water to describe us as a product team that creates amazing UI/UX experiences, by crafting top-notch user experience.</p>
-                                                    </div>
-                                                    <ul class="pro-des-features pro-desc-style-two">
-                                                        <li class="single-features">
-                                                            <div class="icon">
-                                                                <img src="<?= get_template_directory_uri() ?>/img/icon-3.png" alt="icon">
-                                                            </div>
-                                                            Easy Returns
-                                                        </li>
-                                                        <li class="single-features">
-                                                            <div class="icon">
-                                                                <img src="<?= get_template_directory_uri() ?>/img/icon-2.png" alt="icon">
-                                                            </div>
-                                                            Quality Service
-                                                        </li>
-                                                        <li class="single-features">
-                                                            <div class="icon">
-                                                                <img src="<?= get_template_directory_uri() ?>/img/icon-1.png" alt="icon">
-                                                            </div>
-                                                            Original Product
-                                                        </li>
-                                                    </ul>
-                                                    <!-- End .pro-des-features -->
-                                                </div>
-                                                <!-- End .product-desc-wrapper -->
                                             </div>
                                         </div>
                                     </div>
@@ -206,8 +145,75 @@ if (have_posts()) : while (have_posts()) : the_post();
             </div>
             <!-- End Shop Area  -->
 
-            <?php get_template_part('/inc/single-product/recently-view') ?>
-            <?php get_template_part('/inc/single-product/newsletter') ?>
+            <?php
+            $related_ids = wc_get_related_products($single_product['id'], 6);
+            $related_products = [];
+            foreach ($related_ids as $product_id) {
+                $related_products[] = wc_get_product($product_id);
+            }
+            ?>
+
+            <?php
+            $formatted_products = format_products_utils_homepage($related_products);
+            ?>
+
+            <!-- Start Recently Viewed Product Area  -->
+            <div class="axil-product-area bg-color-white axil-section-gap pb--50 pb_sm--30">
+                <div class="container">
+                    <div class="section-title-wrapper">
+                        <span class="title-highlighter highlighter-primary"><i class="fas fa-shopping-basket"></i> Vistos Recente</span>
+                        <h2 class="title">Itens Parecidos</h2>
+                    </div>
+                    <div class="owl-carousel product-new-arrival-single">
+
+                        <?php foreach ($formatted_products as $product) : ?>
+                            <!-- Single Product Start -->
+                            <div class="axil-product product-style-two" style="text-align: center;">
+                                <div class="thumbnail" style="display:flex; align-item:center; justify-content:center; ">
+                                    <a href="<?= $product['link'] ?>" tabindex="-1">
+                                        <div class="sal-animate" style="width:190px;">
+                                            <img src="<?= $product['image'] ?>" alt="<?= $product['name'] ?>" />
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-content">
+                                    <div class="inner">
+                                        <h5 class="title"><a href="<?= $product['link'] ?>" tabindex="-1"><?= $product['name'] ?></a></h5>
+                                        <div class="product-price-variant">
+                                            <?php
+                                            if ($product['sale_price']) : ?>
+                                                <span class="price old-price">R$<?= $product['price'] ?></span>
+                                                <span class="price current-price">
+                                                    R$<?= $product['sale_price'] ?>
+                                                </span>
+                                            <?php else : ?>
+                                                <span class="price current-price">
+                                                    R$<?= $product['price'] ?>
+                                                </span>
+                                            <?php endif ?>
+                                        </div>
+                                    </div>
+                                    <div class="product-hover-action">
+                                        <ul class="cart-action">
+                                            <li class="quickview"><a href="<?= $product['link'] ?>" data-bs-toggle="modal" data-bs-target="#quick-view-modal" tabindex="-1"><i class="far fa-eye"></i></a></li>
+                                            <li class="select-option"><a href="<?= $product['link'] ?>">Selecionar</a></li>
+                                            <li class="wishlist"><a href="<?= $product['link'] ?>" tabindex="-1"><i class="far fa-heart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single Product End -->
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+            <!-- End Recently Viewed Product Area  -->
+
+
+
+
+            <?php //get_template_part('/inc/single-product/newsletter')
+            ?>
 
         </main>
 
