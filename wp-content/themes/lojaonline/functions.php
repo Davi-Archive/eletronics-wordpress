@@ -95,7 +95,8 @@ function register_my_menu()
         'pagina_topo' => __('Página Topo'),
         'contato' => __('Contato'),
         'categorias' => __('Categorias'),
-        'links_rapidos' => __('Links Rápidos')
+        'links_rapidos' => __('Links Rápidos'),
+        'categorias_internas' => __('Categorias Internas')
     ));
 }
 add_action('init', 'register_my_menu');
