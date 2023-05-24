@@ -148,7 +148,7 @@ $data['product_top_menu'] = format_products($products_topo);
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="/paginas/">Páginas</a>
+                                    <a href="#">Páginas</a>
                                     <ul class="axil-submenu">
                                         <?php
                                         $args = array(

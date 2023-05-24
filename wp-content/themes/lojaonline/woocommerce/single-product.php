@@ -159,13 +159,13 @@ if (have_posts()) : while (have_posts()) : the_post();
             ?>
 
             <!-- Start Recently Viewed Product Area  -->
-            <div class="axil-product-area bg-color-white axil-section-gap pb--50 pb_sm--30">
+            <div class="axil-product-area bg-color-white axil-section-gap pb--10 pb_sm--10">
                 <div class="container">
                     <div class="section-title-wrapper">
                         <span class="title-highlighter highlighter-primary"><i class="fas fa-shopping-basket"></i> Vistos Recente</span>
                         <h2 class="title">Itens Parecidos</h2>
                     </div>
-                    <div class="owl-carousel product-new-arrival-single">
+                    <div class="owl-carousel product-new-arrival-single container-itens-recentes">
 
                         <?php foreach ($formatted_products as $product) : ?>
                             <!-- Single Product Start -->
@@ -213,8 +213,7 @@ if (have_posts()) : while (have_posts()) : the_post();
 
 
 
-            <?php //get_template_part('/inc/single-product/newsletter')
-            ?>
+            <?php get_template_part('/inc/newsletter') ?>
 
         </main>
 

@@ -15,6 +15,13 @@ Theme name: Loja Online
 @import "./css/owl.carousel.min.css";
 @import "./css/owl.theme.default.min.css";
 
+.container-itens-recentes {
+  max-height: 380px;
+  overflow: hidden;
+}
+
+
+
 .menu-categorias-container .menu-item a {
   border-left: 15px solid black;
   padding-left: 4px;
@@ -30,7 +37,7 @@ Theme name: Loja Online
   margin: auto !important;
 }
 
-.titulo-main{
+.titulo-main {
   text-align: center;
 }
 
@@ -55,6 +62,12 @@ Theme name: Loja Online
 }
 
 @media screen and (max-width: 992px) {
+.container-itens-recentes {
+  max-height: 400px;
+  overflow: hidden;
+}
+
+
   .container-archive-product {
     display: flex;
     flex-direction: column;

@@ -60,10 +60,10 @@ else : endif; ?>
 
 
 <!-- Start Shop Area  -->
-<div class="axil-shop-area axil-section-gap bg-color-white">
+<div class="axil-shop-area bg-color-white">
   <div class="container">
     <div class="container_breadcrumb">
-      <?php woocommerce_breadcrumb(['delimiter' => '>']) ?>
+      <?php woocommerce_breadcrumb(['delimiter' => ' > ']) ?>
     </div>
 
     <div class="container-archive-product">
