@@ -128,7 +128,7 @@ $data['product_top_menu'] = format_products($products_topo);
                             </div>
                             <ul class="mainmenu">
                                 <li class="menu-item-has-children">
-                                    <a href="#">Home</a>
+                                    <a href="/">Home</a>
                                     <ul class="axil-submenu">
                                         <?php
                                         wp_nav_menu([
@@ -140,7 +140,7 @@ $data['product_top_menu'] = format_products($products_topo);
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="#">Loja</a>
+                                    <a href="/loja/">Loja</a>
                                     <ul class="axil-submenu">
                                         <?php foreach ($data['product_top_menu'] as $product) { ?>
                                             <li><a href="<?= $product['link'] ?>"><?= $product['name'] ?></a></li>
@@ -148,7 +148,7 @@ $data['product_top_menu'] = format_products($products_topo);
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="#">Páginas</a>
+                                    <a href="/paginas/">Páginas</a>
                                     <ul class="axil-submenu">
                                         <?php
                                         $args = array(
