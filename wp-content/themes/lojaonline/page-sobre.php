@@ -12,7 +12,10 @@ $sobre = get_page_by_title('sobre');
             <ul class="axil-breadcrumb">
               <li class="axil-breadcrumb-item"><a href="/">Home</a></li>
               <li class="separator"></li>
-              <li class="axil-breadcrumb-item active" aria-current="page">Sobre</li>
+              <?php if (have_posts()) : while (have_posts()) : the_post() ?>
+                  <li class="axil-breadcrumb-item active" aria-current="page"><?php the_title() ?></li>
+              <?php endwhile;
+              else : endif; ?>
             </ul>
             <h1 class="title">Um Pouco mais sobre nossa Loja</h1>
           </div>
@@ -146,55 +149,6 @@ $sobre = get_page_by_title('sobre');
   <!-- End Axil Newsletter Area  -->
 </main>
 
+<?php get_template_part('inc/home/service-garanteed') ?>
 
-<div class="service-area">
-  <div class="container">
-    <div class="row row-cols-xl-4 row-cols-sm-2 row-cols-1 row--20">
-      <div class="col">
-        <div class="service-box service-style-2">
-          <div class="icon">
-            <img src="<?= get_template_directory_uri() ?>/img/service1.png" alt="Service">
-          </div>
-          <div class="content">
-            <h6 class="title">Fast &amp; Secure Delivery</h6>
-            <p>Tell about your service.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="service-box service-style-2">
-          <div class="icon">
-            <img src="<?= get_template_directory_uri() ?>/img/service2.png" alt="Service">
-          </div>
-          <div class="content">
-            <h6 class="title">Money Back Guarantee</h6>
-            <p>Within 10 days.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="service-box service-style-2">
-          <div class="icon">
-            <img src="<?= get_template_directory_uri() ?>/img/service3.png" alt="Service">
-          </div>
-          <div class="content">
-            <h6 class="title">24 Hour Return Policy</h6>
-            <p>No question ask.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="service-box service-style-2">
-          <div class="icon">
-            <img src="<?= get_template_directory_uri() ?>/img/service4.png" alt="Service">
-          </div>
-          <div class="content">
-            <h6 class="title">Pro Quality Support</h6>
-            <p>24/7 Live support.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 <?php get_footer() ?>
