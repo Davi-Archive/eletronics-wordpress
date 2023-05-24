@@ -35,13 +35,6 @@ function format_single_product($id, $img_size = 'medium')
 }
 ?>
 
-<div class="container breadcumb">
-    <?php woocommerce_breadcrumb(['delimiter' => ' > ']); ?>
-</div>
-
-<div class="container notification">
-    <?php wc_print_notices(); ?>
-</div>
 
 <?php
 if (have_posts()) : while (have_posts()) : the_post();
@@ -49,7 +42,15 @@ if (have_posts()) : while (have_posts()) : the_post();
         $single_product = $data['product'];
 ?>
 
-        <main class="main-wrapper">
+        <main class="main-wrapper container">
+            <div class="container_breadcrumb">
+                <?php woocommerce_breadcrumb(['delimiter' => ' > ']); ?>
+            </div>
+
+            <div class="container notification">
+                <?php wc_print_notices(); ?>
+            </div>
+
             <!-- Start Shop Area  -->
             <div class="axil-single-product-area bg-color-white">
                 <div class="single-product-thumb axil-section-gap pb--20 pb_sm--0 bg-vista-white">

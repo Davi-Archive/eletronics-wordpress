@@ -1,0 +1,27 @@
+/* Minha Conta */
+
+.woocommerce-MyAccount-content{
+  padding-bottom: 8rem;
+  border-bottom: 2px solid black;
+}
+
+.woocommerce-MyAccount-navigation {
+  background-color: #000;
+}
+.woocommerce-MyAccount-navigation ul {
+  display: flex;
+  gap: 10px;
+}
+
+.woocommerce-MyAccount-navigation ul li a {
+  color: white !important;
+}
+
+.woocommerce-MyAccount-navigation ul li a:hover {
+  color: gray !important;
+}
+
+.woocommerce-form.woocommerce-form-login.login {
+  max-width: 400px;
+  margin: auto;
+}

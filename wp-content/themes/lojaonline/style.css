@@ -9,6 +9,7 @@ Theme name: Loja Online
 @import "./css/magnific-popup.css";
 @import "./css/sal.css";
 @import "./css/slick.css";
+@import "./css/woocommerce.css";
 @import "./css/slick-theme.css";
 @import "./css/style.min.css";
 @import "./css/owl.carousel.min.css";
@@ -27,6 +28,10 @@ Theme name: Loja Online
 
 .margin-auto {
   margin: auto !important;
+}
+
+.titulo-main{
+  text-align: center;
 }
 
 .container-archive-product {
