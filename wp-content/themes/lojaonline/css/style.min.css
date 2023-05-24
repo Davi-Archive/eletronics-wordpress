@@ -1895,14 +1895,14 @@ input[type="tel"],
 textarea {
   font-size: var(--font-size-b2);
   font-weight: 400;
-  height: auto;
+  height: 40px;
   line-height: 60px;
-  background: #fff;
+  background: #ede9e9;
   -webkit-box-shadow: none;
-  box-shadow: none;
-  padding: 0 30px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  padding: 10 30px;
   outline: none;
-  border: var(--border-width) solid var(--color-border);
+  border: 1px solid gray;
   border-radius: var(--radius);
 }
 input[type="text"]::placeholder,

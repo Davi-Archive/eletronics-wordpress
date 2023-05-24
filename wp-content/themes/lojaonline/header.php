@@ -97,8 +97,7 @@ $data['product_top_menu'] = format_products($products_topo);
                         <div class="header-top-link">
                             <ul class="quick-link">
                                 <li><a href="/ajuda/">Ajuda</a></li>
-                                <li><a href="/wp-login.php?action=register">Cadastrar</a></li>
-                                <li><a href="/wp-login.php">Logar</a></li>
+                                <li><a href="/minha-conta/">Minha Conta</a></li>
                             </ul>
                         </div>
                     </div>
