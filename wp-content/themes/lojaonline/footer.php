@@ -15,7 +15,7 @@
                          <?php if (get_field('logo_footer')) : ?>
                              <div class="logo mb--30">
                                  <a href="/">
-                                     <img class="light-logo" src="<?= get_template_directory_uri() ?>/img/logo.png" alt="Logo Images">
+                                     <img class="light-logo" src="<?= get_template_directory_uri() ?>/img/logo.webp" alt="Logo Images">
                                  </a>
                              </div>
                          <?php endif; ?>
@@ -83,14 +83,14 @@
                                  <span>Salve R$3 Com nosso aplicativo &amp; Apenas novos usuários</span>
                                  <div class="download-btn-group">
                                      <div class="qr-code">
-                                         <img src="<?= get_template_directory_uri() ?>/img/qr.png" alt="Axilthemes">
+                                         <img src="<?= get_template_directory_uri() ?>/img/qr.webp" alt="Axilthemes">
                                      </div>
                                      <div class="app-link">
                                          <a href="/">
-                                             <img src="<?= get_template_directory_uri() ?>/img/app-store.png" alt="App Store">
+                                             <img src="<?= get_template_directory_uri() ?>/img/app-store.webp" alt="App Store">
                                          </a>
                                          <a href="/">
-                                             <img src="<?= get_template_directory_uri() ?>/img/play-store.png" alt="Play Store">
+                                             <img src="<?= get_template_directory_uri() ?>/img/play-store.webp" alt="Play Store">
                                          </a>
                                      </div>
                                  </div>
@@ -105,7 +105,7 @@
                                  <span>Envie nosso loja por QR Code. </span>
                                  <div class="download-btn-group">
                                      <div class="qr-code">
-                                         <img src="<?= get_template_directory_uri() ?>/img/qr.png" alt="Axilthemes">
+                                         <img src="<?= get_template_directory_uri() ?>/img/qr.webp" alt="Axilthemes">
                                      </div>
                                  </div>
                              </div>
@@ -159,15 +159,15 @@
                          <ul class="payment-icons-bottom quick-link">
 
                              <?php if (get_field('paypal')) : ?>
-                                 <li><img src="<?= get_template_directory_uri() ?>/img/cart-1.png" alt="paypal cart"></li>
+                                 <li><img src="<?= get_template_directory_uri() ?>/img/cart-1.webp" alt="paypal cart"></li>
                              <?php endif; ?>
 
                              <?php if (get_field('mastercard')) : ?>
-                                 <li><img src="<?= get_template_directory_uri() ?>/img/cart-2.png" alt="paypal cart"></li>
+                                 <li><img src="<?= get_template_directory_uri() ?>/img/cart-2.webp" alt="paypal cart"></li>
                              <?php endif; ?>
 
                              <?php if (get_field('visa')) : ?>
-                                 <li><img src="<?= get_template_directory_uri() ?>/img/cart-5.png" alt="paypal cart"></li>
+                                 <li><img src="<?= get_template_directory_uri() ?>/img/cart-5.webp" alt="paypal cart"></li>
                              <?php endif; ?>
                          </ul>
                      </div>

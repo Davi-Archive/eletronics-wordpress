@@ -15,34 +15,34 @@
                                         <div class="slick-list">
                                             <div class="slick-track" style="opacity: 1; width: 0px; transform: translate3d(0px, 0px, 0px);">
                                                 <div class="thumbnail slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 0px;" tabindex="0">
-                                                    <img src="<?= get_template_directory_uri() ?>/img/product-big-01.png" alt="Product Images">
+                                                    <img src="<?= get_template_directory_uri() ?>/img/product-big-01.webp" alt="Product Images">
                                                     <div class="label-block label-right">
                                                         <div class="product-badget">20% OFF</div>
                                                     </div>
                                                     <div class="product-quick-view position-view">
-                                                        <a href="<?= get_template_directory_uri() ?>/img/product-big-01.png" class="popup-zoom" tabindex="0">
+                                                        <a href="<?= get_template_directory_uri() ?>/img/product-big-01.webp" class="popup-zoom" tabindex="0">
                                                             <i class="far fa-search-plus"></i>
                                                         </a>
                                                     </div>
                                                 </div>
                                                 <div class="thumbnail slick-slide" data-slick-index="1" aria-hidden="true" tabindex="-1" style="width: 0px;">
-                                                    <img src="<?= get_template_directory_uri() ?>/img/product-big-02.png" alt="Product Images">
+                                                    <img src="<?= get_template_directory_uri() ?>/img/product-big-02.webp" alt="Product Images">
                                                     <div class="label-block label-right">
                                                         <div class="product-badget">20% OFF</div>
                                                     </div>
                                                     <div class="product-quick-view position-view">
-                                                        <a href="<?= get_template_directory_uri() ?>/img/product-big-02.png" class="popup-zoom" tabindex="-1">
+                                                        <a href="<?= get_template_directory_uri() ?>/img/product-big-02.webp" class="popup-zoom" tabindex="-1">
                                                             <i class="far fa-search-plus"></i>
                                                         </a>
                                                     </div>
                                                 </div>
                                                 <div class="thumbnail slick-slide" data-slick-index="2" aria-hidden="true" tabindex="-1" style="width: 0px;">
-                                                    <img src="<?= get_template_directory_uri() ?>/img/product-big-03.png" alt="Product Images">
+                                                    <img src="<?= get_template_directory_uri() ?>/img/product-big-03.webp" alt="Product Images">
                                                     <div class="label-block label-right">
                                                         <div class="product-badget">20% OFF</div>
                                                     </div>
                                                     <div class="product-quick-view position-view">
-                                                        <a href="<?= get_template_directory_uri() ?>/img/product-big-03.png" class="popup-zoom" tabindex="-1">
+                                                        <a href="<?= get_template_directory_uri() ?>/img/product-big-03.webp" class="popup-zoom" tabindex="-1">
                                                             <i class="far fa-search-plus"></i>
                                                         </a>
                                                     </div>
@@ -61,13 +61,13 @@
                                         <div class="slick-list draggable" style="height: 120px;">
                                             <div class="slick-track" style="opacity: 1; height: 60px; transform: translate3d(0px, 0px, 0px);">
                                                 <div class="small-thumb-img slick-slide slick-current slick-active" style="width: 0px;" tabindex="0" data-slick-index="0" aria-hidden="false">
-                                                    <img src="<?= get_template_directory_uri() ?>/img/thumb-08.png" alt="thumb image">
+                                                    <img src="<?= get_template_directory_uri() ?>/img/thumb-08.webp" alt="thumb image">
                                                 </div>
                                                 <div class="small-thumb-img slick-slide slick-active" tabindex="0" style="width: 0px;" data-slick-index="1" aria-hidden="false">
-                                                    <img src="<?= get_template_directory_uri() ?>/img/thumb-07.png" alt="thumb image">
+                                                    <img src="<?= get_template_directory_uri() ?>/img/thumb-07.webp" alt="thumb image">
                                                 </div>
                                                 <div class="small-thumb-img slick-slide slick-active" tabindex="0" style="width: 0px;" data-slick-index="2" aria-hidden="false">
-                                                    <img src="<?= get_template_directory_uri() ?>/img/thumb-09.png" alt="thumb image">
+                                                    <img src="<?= get_template_directory_uri() ?>/img/thumb-09.webp" alt="thumb image">
                                                 </div>
                                             </div>
                                         </div>
@@ -80,7 +80,7 @@
                                 <div class="inner">
                                     <div class="product-rating">
                                         <div class="star-rating">
-                                            <img src="<?= get_template_directory_uri() ?>/img/rate.png" alt="Rate Images">
+                                            <img src="<?= get_template_directory_uri() ?>/img/rate.webp" alt="Rate Images">
                                         </div>
                                         <div class="review-link">
                                             <a href="https://new.axilthemes.com/demo/template/etrade/index-1.html#">(<span>1</span> customer reviews)</a>

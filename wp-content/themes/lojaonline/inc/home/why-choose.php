@@ -9,7 +9,7 @@
               <div class="col">
                   <div class="service-box">
                       <div class="icon">
-                          <img src="<?= get_template_directory_uri() ?>/img/service6.png" alt="Service">
+                          <img src="<?= get_template_directory_uri() ?>/img/service6.webp" alt="Service">
                       </div>
                       <h6 class="title">Entrega Rápida &amp; Segura</h6>
                   </div>
@@ -17,7 +17,7 @@
               <div class="col">
                   <div class="service-box">
                       <div class="icon">
-                          <img src="<?= get_template_directory_uri() ?>/img/service7.png" alt="Service">
+                          <img src="<?= get_template_directory_uri() ?>/img/service7.webp" alt="Service">
                       </div>
                       <h6 class="title">100% de Garantia no Produto</h6>
                   </div>
@@ -25,7 +25,7 @@
               <div class="col">
                   <div class="service-box">
                       <div class="icon">
-                          <img src="<?= get_template_directory_uri() ?>/img/service8.png" alt="Service">
+                          <img src="<?= get_template_directory_uri() ?>/img/service8.webp" alt="Service">
                       </div>
                       <h6 class="title">24 Horas para retorno</h6>
                   </div>
@@ -33,7 +33,7 @@
               <div class="col">
                   <div class="service-box">
                       <div class="icon">
-                          <img src="<?= get_template_directory_uri() ?>/img/service9.png" alt="Service">
+                          <img src="<?= get_template_directory_uri() ?>/img/service9.webp" alt="Service">
                       </div>
                       <h6 class="title">Embalagem boa</h6>
                   </div>
@@ -41,7 +41,7 @@
               <div class="col">
                   <div class="service-box">
                       <div class="icon">
-                          <img src="<?= get_template_directory_uri() ?>/img/service10.png" alt="Service">
+                          <img src="<?= get_template_directory_uri() ?>/img/service10.webp" alt="Service">
                       </div>
                       <h6 class="title">Suporte 24/7</h6>
                   </div>

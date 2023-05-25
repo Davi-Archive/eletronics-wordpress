@@ -5,7 +5,7 @@
                 <div class="col-lg-6 mb--30">
                     <div class="single-poster">
                         <a href="/loja/">
-                            <img src="<?= get_template_directory_uri() ?>/img/poster-01.png" alt="eTrade promotion poster">
+                            <img src="<?= get_template_directory_uri() ?>/img/poster-01.webp" alt="eTrade promotion poster">
                             <div class="poster-content">
                                 <div class="inner">
                                     <h3 class="title">Som ótimo, <br> por menos.</h3>
@@ -20,7 +20,7 @@
                 <div class="col-lg-6 mb--30">
                     <div class="single-poster">
                         <a href="/loja/">
-                            <img src="<?= get_template_directory_uri() ?>/img/poster-02.png" alt="eTrade promotion poster">
+                            <img src="<?= get_template_directory_uri() ?>/img/poster-02.webp" alt="eTrade promotion poster">
                             <div class="poster-content content-left">
                                 <div class="inner">
                                     <span class="sub-title">10% de Desconto</span>

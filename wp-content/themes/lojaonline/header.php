@@ -24,7 +24,7 @@
     <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/banner.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" href="<?= get_template_directory_uri(); ?>/img/favicon.png">
+    <link rel="shortcut icon" href="<?= get_template_directory_uri(); ?>/img/favicon.webp">
 
     <!-- Header Scripts Start -->
     <?php wp_head() ?>
@@ -111,10 +111,10 @@ $data['product_top_menu'] = format_products($products_topo);
                 <div class="header-navbar">
                     <div class="header-brand">
                         <a href="/" class="logo logo-dark">
-                            <img src="<?= get_template_directory_uri() ?>/img/logo.png" alt="Site Logo">
+                            <img src="<?= get_template_directory_uri() ?>/img/logo.webp" alt="Site Logo">
                         </a>
                         <a href="/" class="logo logo-light">
-                            <img src="<?= get_template_directory_uri() ?>/img/logo-light.png" alt="Site Logo">
+                            <img src="<?= get_template_directory_uri() ?>/img/logo-light.webp" alt="Site Logo">
                         </a>
                     </div>
                     <div class="header-main-nav">
@@ -123,7 +123,7 @@ $data['product_top_menu'] = format_products($products_topo);
                             <button class="mobile-close-btn mobile-nav-toggler"><i class="fas fa-times"></i></button>
                             <div class="mobile-nav-brand">
                                 <a href="/" class="logo">
-                                    <img src="<?= get_template_directory_uri() ?>/img/logo.png" alt="Site Logo">
+                                    <img src="<?= get_template_directory_uri() ?>/img/logo.webp" alt="Site Logo">
                                 </a>
                             </div>
                             <ul class="mainmenu">

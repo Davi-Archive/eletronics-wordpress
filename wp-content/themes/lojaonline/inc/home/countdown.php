@@ -44,7 +44,7 @@ $full_link = get_site_url() . get_field('produto_contagem_url', $home);
                 </div>
                 <div class="col-xl-7 col-lg-6">
                     <div class="poster-countdown-thumbnail">
-                        <img src="<?= get_template_directory_uri() ?>/img/poster-03.png" alt="Poster Product">
+                        <img src="<?= get_template_directory_uri() ?>/img/poster-03.webp" alt="Poster Product">
                         <div class="music-singnal">
                             <div class="item-circle circle-1"></div>
                             <div class="item-circle circle-2"></div>

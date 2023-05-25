@@ -4,7 +4,7 @@
             <div class="col">
                 <div class="service-box service-style-2">
                     <div class="icon">
-                        <img src="<?= get_template_directory_uri() ?>/img/service1.png" alt="Service">
+                        <img src="<?= get_template_directory_uri() ?>/img/service1.webp" alt="Service">
                     </div>
                     <div class="content">
                         <h6 class="title">Envio Rápido &amp; Segurança</h6>
@@ -15,7 +15,7 @@
             <div class="col">
                 <div class="service-box service-style-2">
                     <div class="icon">
-                        <img src="<?= get_template_directory_uri() ?>/img/service2.png" alt="Service">
+                        <img src="<?= get_template_directory_uri() ?>/img/service2.webp" alt="Service">
                     </div>
                     <div class="content">
                         <h6 class="title">Devolução garantida</h6>
@@ -26,7 +26,7 @@
             <div class="col">
                 <div class="service-box service-style-2">
                     <div class="icon">
-                        <img src="<?= get_template_directory_uri() ?>/img/service3.png" alt="Service">
+                        <img src="<?= get_template_directory_uri() ?>/img/service3.webp" alt="Service">
                     </div>
                     <div class="content">
                         <h6 class="title">Devolução em 24 horas</h6>
@@ -37,7 +37,7 @@
             <div class="col">
                 <div class="service-box service-style-2">
                     <div class="icon">
-                        <img src="<?= get_template_directory_uri() ?>/img/service4.png" alt="Service">
+                        <img src="<?= get_template_directory_uri() ?>/img/service4.webp" alt="Service">
                     </div>
                     <div class="content">
                         <h6 class="title">Suporte de Qualidade</h6>

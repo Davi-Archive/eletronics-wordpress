@@ -23,7 +23,7 @@ $sobre = get_page_by_title('sobre');
         <div class="col-lg-6 col-md-4">
           <div class="inner">
             <div class="bradcrumb-thumb">
-              <img src="<?= get_template_directory_uri() ?>/img/product-45.png" alt="Image">
+              <img src="<?= get_template_directory_uri() ?>/img/product-45.webp" alt="Image">
             </div>
           </div>
         </div>
@@ -39,7 +39,7 @@ $sobre = get_page_by_title('sobre');
         <div class="col-xl-4 col-lg-6">
           <div class="about-thumbnail">
             <div class="thumbnail">
-              <img src="<?= get_template_directory_uri() ?>/img/about-01.png" alt="About Us">
+              <img src="<?= get_template_directory_uri() ?>/img/about-01.webp" alt="About Us">
             </div>
           </div>
         </div>
@@ -70,7 +70,7 @@ $sobre = get_page_by_title('sobre');
         <div class="col-lg-4">
           <div class="about-info-box">
             <div class="thumb">
-              <img src="<?= get_template_directory_uri() ?>/img/shape-01.png" alt="Shape">
+              <img src="<?= get_template_directory_uri() ?>/img/shape-01.webp" alt="Shape">
             </div>
             <div class="content">
               <h6 class="title"><?php the_field('titulo1', $sobre) ?></h6>
@@ -81,7 +81,7 @@ $sobre = get_page_by_title('sobre');
         <div class="col-lg-4">
           <div class="about-info-box">
             <div class="thumb">
-              <img src="<?= get_template_directory_uri() ?>/img/shape-02.png" alt="Shape">
+              <img src="<?= get_template_directory_uri() ?>/img/shape-02.webp" alt="Shape">
             </div>
             <div class="content">
               <h6 class="title"><?php the_field('titulo2', $sobre) ?></h6>
@@ -92,7 +92,7 @@ $sobre = get_page_by_title('sobre');
         <div class="col-lg-4">
           <div class="about-info-box">
             <div class="thumb">
-              <img src="<?= get_template_directory_uri() ?>/img/shape-03.png" alt="Shape">
+              <img src="<?= get_template_directory_uri() ?>/img/shape-03.webp" alt="Shape">
             </div>
             <div class="content">
               <h6 class="title"><?php the_field('titulo3', $sobre) ?></h6>
@@ -113,7 +113,7 @@ $sobre = get_page_by_title('sobre');
       <div class="row align-items-center mb--80 mb_sm--60">
         <div class="col-lg-5">
           <div class="about-thumbnail">
-            <img src="<?= get_template_directory_uri() ?>/img/about-02.png" alt="about">
+            <img src="<?= get_template_directory_uri() ?>/img/about-02.webp" alt="about">
           </div>
         </div>
         <div class="col-lg-7">
@@ -128,7 +128,7 @@ $sobre = get_page_by_title('sobre');
       <div class="row align-items-center">
         <div class="col-lg-5 order-lg-2">
           <div class="about-thumbnail">
-            <img src="<?= get_template_directory_uri() ?>/img/about-03.png" alt="about">
+            <img src="<?= get_template_directory_uri() ?>/img/about-03.webp" alt="about">
           </div>
         </div>
         <div class="col-lg-7 order-lg-1">

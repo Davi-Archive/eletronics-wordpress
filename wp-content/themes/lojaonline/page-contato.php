@@ -24,7 +24,7 @@ $contact = get_page_by_title('contato');
         <div class="col-lg-6 col-md-4">
           <div class="inner">
             <div class="bradcrumb-thumb">
-              <img src="<?= get_template_directory_uri() ?>/img/product-45.png" alt="Image">
+              <img src="<?= get_template_directory_uri() ?>/img/product-45.webp" alt="Image">
             </div>
           </div>
         </div>

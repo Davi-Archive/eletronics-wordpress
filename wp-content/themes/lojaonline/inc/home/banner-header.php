@@ -42,9 +42,9 @@
      </div>
      <ul class="shape-group">
        <li class="shape-1">
-         <img src="<?= get_template_directory_uri() ?>/img/shape-1.png" alt="Shape">
+         <img src="<?= get_template_directory_uri() ?>/img/shape-1.webp" alt="Shape">
        </li>
-       <li class="shape-2"><img src="<?= get_template_directory_uri() ?>/img/shape-2.png" alt="Shape"></li>
+       <li class="shape-2"><img src="<?= get_template_directory_uri() ?>/img/shape-2.webp" alt="Shape"></li>
      </ul>
    </div>
  <?php endforeach; ?>
