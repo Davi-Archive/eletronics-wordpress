@@ -156,3 +156,8 @@ function remove_some_body_class($classes)
     return $classes;
 }
 add_filter('body_class', 'remove_some_body_class');
+
+
+/* Email */
+
+require_once(TEMPLATEPATH . '/endpoint/email.php');

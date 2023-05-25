@@ -42,7 +42,9 @@ $contact = get_page_by_title('contato');
             <div class="contact-form">
               <h3 class="title mb--10">Gostariamos de saber mais sobre você.</h3>
               <p>Caso precise conversar com a gente envie uma mensagem abaixo.</p>
-              <form id="contact-form" method="POST" action="/mail.php" class="axil-contact-form">
+
+
+              <form id="contact-form" method="POST" class="axil-contact-form">
                 <div class="row row--10">
                   <div class="col-lg-4">
                     <div class="form-group">

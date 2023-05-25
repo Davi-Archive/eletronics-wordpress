@@ -66,7 +66,7 @@
           .attr("disabled", "disabled");
         var data = $(this).serialize();
         $.ajax({
-          url: "mail.php",
+          url: "/wp-json/api/email/",
           type: "post",
           dataType: "json",
           data: data,
