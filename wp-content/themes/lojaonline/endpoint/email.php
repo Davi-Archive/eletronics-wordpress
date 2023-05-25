@@ -1,6 +1,7 @@
 <?php
+//$contact = get_page_by_title('contato');
 
-function api_usuario_post($request)
+function api_email_post($request)
 {
   $name = $request['contact-name'];
   $phone = $request['contact-phone'];
@@ -14,7 +15,8 @@ function api_usuario_post($request)
 
   if (wp_mail($to, $subject, $message, $headers)) {
     $response = array(
-      'status'=> 'Email enviado',
+      'success' => 'Email enviado com sucesso, aguarde o contato',
+      'status' => 'Email enviado',
       'method' => 'POST',
       'email' => [
         'name' => $name,
@@ -25,6 +27,8 @@ function api_usuario_post($request)
     );
   } else {
     $response = array(
+      'code'=> false,
+      'err'=> 'Houve um erro no envio do email',
       'status' => 'Email falhou',
     );
   }
@@ -33,35 +37,14 @@ function api_usuario_post($request)
   return rest_ensure_response($response);
 }
 
-function api_usuario_get($request)
-{
-  $response = array(
-    'nome' => 'Davi',
-    'lol' => 'xp',
-    'method' => 'GET'
-  );
-  return rest_ensure_response($response);
-}
-
-function registrar_api_usuario_get($request)
-{
-  register_rest_route('api', '/usuario', [
-    [
-      'methods' => WP_REST_Server::READABLE,
-      'callback' => 'api_usuario_get'
-    ]
-  ]);
-}
-
-function registrar_api_usuario_post($request)
+function registrar_api_email_post($request)
 {
   register_rest_route('api', '/email', [
     [
       'methods' => WP_REST_Server::CREATABLE,
-      'callback' => 'api_usuario_post'
+      'callback' => 'api_email_post'
     ]
   ]);
 }
 
-add_action('rest_api_init', 'registrar_api_usuario_get');
-add_action('rest_api_init', 'registrar_api_usuario_post');
+add_action('rest_api_init', 'registrar_api_email_post');
