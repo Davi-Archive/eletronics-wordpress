@@ -159,5 +159,20 @@ add_filter('body_class', 'remove_some_body_class');
 
 
 /* Email */
-
 require_once(TEMPLATEPATH . '/endpoint/email.php');
+
+// PHPMailer functions.php details
+
+add_action('phpmailer_init', 'my_smtp_phpemailer');
+function my_smtp_phpemailer($phpmailer)
+{
+    $phpmailer->isSMTP();
+    $phpmailer->Host       = SMTP_HOST;
+    $phpmailer->SMTPAuth   = SMTP_AUTH;
+    $phpmailer->Port       = SMTP_PORT;
+    $phpmailer->Username   = SMTP_USER;
+    $phpmailer->Password   = SMTP_PASS;
+    $phpmailer->SMTPSecure = SMTP_SECURE;
+    $phpmailer->From       = SMTP_FROM;
+    $phpmailer->FromName   = SMTP_NAME;
+}
