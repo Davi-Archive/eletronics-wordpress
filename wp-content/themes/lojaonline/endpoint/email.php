@@ -1,6 +1,7 @@
 <?php
 //$contact = get_page_by_title('contato');
 
+
 function api_email_post($request)
 {
   $name = $request['contact-name'];
@@ -8,29 +9,56 @@ function api_email_post($request)
   $email = $request['contact-email'];
 
 
-  $to = "davi4alves@gmail.com";
+  $to = "contato@codewave.fun";
   $subject = $phone;
   $message = $request['contact-message'];
   $headers = "From: " . $name . " <" . $email . ">\r\n";
 
-  if (wp_mail($to, $subject, $message, $headers)) {
-    $response = array(
-      'success' => 'Email enviado com sucesso, aguarde o contato',
-      'status' => 'Email enviado',
-      'method' => 'POST',
-      'email' => [
-        'name' => $name,
-        'phone' => $phone,
-        'email' => $email,
-        'message' => $message
-      ]
-    );
+  if (
+    !empty($subject) &&
+    !empty($email) &&
+    !empty($name) &&
+    !empty($message)
+  ) {
+    $sent = wp_mail($to, $subject, $message, $headers);
+    if ($sent) {
+      $response = array(
+        'success' => 'Email enviado com sucesso, aguarde o contato',
+        'status' => 'Email enviado',
+        'method' => 'POST',
+        'email' => [
+          'name' => $name,
+          'phone' => $phone,
+          'email' => $email,
+          'message' => $message
+        ]
+      );
+    } else {
+      $response = array(
+        'code' => false,
+        'err' => 'Houve um erro no envio do email',
+        'status' => 'Email falhou'
+      );
+    }
   } else {
+    $_MESSAGE = "O campo não pode ser vazio";
     $response = array(
-      'code'=> false,
-      'err'=> 'Houve um erro no envio do email',
-      'status' => 'Email falhou',
+      'code' => false,
+      'err' => 'Houve um erro no envio do email',
+      'status' => 'Email falhou'
     );
+    if (empty($subject)) {
+      $response['phone'] = $_MESSAGE;
+    }
+    if (empty($email)) {
+      $response['email'] = $_MESSAGE;
+    }
+    if (empty($name)) {
+      $response['name'] = $_MESSAGE;
+    }
+    if (empty($message)) {
+      $response['message'] = $_MESSAGE;
+    }
   }
 
 
