@@ -37,7 +37,7 @@ $product_banner = wc_get_products([
 ]);
 
 
-$banner_product = format_products_utils_homepage($product_banner,null);
+$banner_product = format_products_utils_homepage($product_banner, null);
 
 
 // Products Explore

@@ -10,17 +10,20 @@ function api_email_post($request)
 
 
   $to = "contato@codewave.fun";
-  $subject = $phone;
+  $subject = 'Contato da Loja(Form)';
   $message = $request['contact-message'];
   $headers = "From: " . $name . " <" . $email . ">\r\n";
 
   if (
-    !empty($subject) &&
-    !empty($email) &&
     !empty($name) &&
+    !empty($email) &&
+    !empty($phone) &&
     !empty($message)
   ) {
-    $sent = wp_mail($to, $subject, $message, $headers);
+
+    $formatted_message = "Mensagem do site shop.codewave.fun\nNome: $name\nEmail: $email\nTelefone: $phone \nMensagem: $message";
+
+    $sent = wp_mail($to, $subject, $formatted_message, $headers);
     if ($sent) {
       $response = array(
         'success' => 'Email enviado com sucesso, aguarde o contato',
