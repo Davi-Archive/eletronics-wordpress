@@ -6,19 +6,6 @@ $contact = get_page_by_title('contato');
 <main class="main-wrapper">
   <!-- Start Blog Area  -->
   <div class="axil-blog-area axil-section-gap">
-    <div class="axil-single-post post-formate post-standard">
-      <div class="container">
-        <div class="content-block">
-          <div class="inner">
-            <div class="post-thumbnail">
-              <img src="<?php get_template_directory_uri() ?>/img/blog-single.webp" alt="blog Images">
-            </div>
-            <!-- End .thumbnail -->
-          </div>
-        </div>
-        <!-- End .content-blog -->
-      </div>
-    </div>
     <!-- End .single-post -->
     <div class="post-single-wrapper position-relative">
       <div class="container">
@@ -56,7 +43,6 @@ $contact = get_page_by_title('contato');
                   <ul class="comment-list">
                     <!-- Start Comment Respond  -->
                     <?php
-                    // get_template_part('content', get_post_format());
                     comments_template();
                     ?>
                     <!-- End Comment Respond  -->

@@ -15,12 +15,15 @@ Theme name: Loja Online
 @import "./css/owl.carousel.min.css";
 @import "./css/owl.theme.default.min.css";
 
+/* Seção Comentários */
+.comment-form-comment #comment{
+  height: 150px;
+}
+
 .container-itens-recentes {
   max-height: 380px;
   overflow: hidden;
 }
-
-
 
 .menu-categorias-container .menu-item a {
   border-left: 15px solid black;

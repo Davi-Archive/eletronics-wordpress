@@ -2,6 +2,7 @@
 get_header();
 ?>
 
+
 <main class="main-wrapper">
   <!-- Start Breadcrumb Area  -->
   <div class="axil-breadcrumb-area">
@@ -34,17 +35,9 @@ get_header();
       <div class="row row--25">
         <div class="col-lg-8 axil-post-wrapper">
 
-
-          <h2><a href="<?php the_permalink(); ?>"></a></h2>
-
           <!-- Start Single Blog  -->
           <?php
-          $query = new WP_Query(array(
-            'post_type' => 'post',
-            'posts_per_page' => 4,
-            'paged' => get_query_var('paged') ? get_query_var('paged') : 1
-          ));
-          if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
+          if (have_posts()) : while (have_posts()) : the_post(); ?>
               <div class="content-blog sticky">
                 <div class="inner">
                   <div class="content">
@@ -89,7 +82,6 @@ get_header();
             'base' => str_replace(99999999, '%#%', esc_url(get_pagenum_link(99999999))),
             'format' => '?paged=%#%',
             'current' => max(1, get_query_var('paged')),
-            'total' => $query->max_num_pages,
             'prev_text' => __('&laquo; Anterior', 'text-domain'),
             'next_text' => __('Próximo &raquo;', 'text-domain')
           );
@@ -107,5 +99,6 @@ get_header();
   <!-- End Blog Area  -->
 
 </main>
+
 
 <?php get_footer() ?>

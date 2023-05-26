@@ -5,12 +5,12 @@ $args = array(
   'posts_per_page' => 3,
 );
 $product_list = wc_get_products($args);
-$data['products'] = format_products_utils_homepage($product_list);
+$data_menu['products'] = format_products_utils_homepage($product_list);
 
 // post list sidebar
 $args = array('posts_per_page' => 3); // Change the number of posts as per your requirement
 $postslist = get_posts($args);
-$data['posts'] = $postslist;
+$data_menu['posts'] = $postslist;
 ?>
 
 <div class="col-lg-4">
@@ -21,7 +21,7 @@ $data['posts'] = $postslist;
     <div class="axil-single-widget mt--40">
       <h6 class="widget-title">Posts Recentes</h6>
 
-      <?php foreach ($data['posts'] as $post) :
+      <?php foreach ($data_menu['posts'] as $post) :
         setup_postdata($post); ?>
         <!-- Start Single Post List  -->
         <div class="content-blog post-list-view mb--20">
@@ -55,7 +55,7 @@ $data['posts'] = $postslist;
     <div class="axil-single-widget mt--40">
       <h6 class="widget-title">Produtos Recentes</h6>
       <ul class="product_list_widget recent-viewed-product">
-        <?php foreach ($data['products'] as $product) : ?>
+        <?php foreach ($data_menu['products'] as $product) : ?>
           <li>
             <div class="thumbnail">
               <a href="<?= $product['link'] ?>">
@@ -76,7 +76,7 @@ $data['posts'] = $postslist;
               </div>
             </div>
           </li>
-        <? endforeach; ?>
+        <?php endforeach; ?>
         <!-- End Single product_list  -->
       </ul>
 
