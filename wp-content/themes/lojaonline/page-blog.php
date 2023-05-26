@@ -1,7 +1,4 @@
 <?php
-
-use Automattic\WooCommerce\Blocks\BlockTypes\ProductNew;
-
 get_header();
 
 // product list
