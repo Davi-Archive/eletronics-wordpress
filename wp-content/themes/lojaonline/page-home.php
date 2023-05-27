@@ -83,13 +83,13 @@ $data['categories'] = $categories_formatted;
                 <span class="title-highlighter highlighter-secondary"> <i class="fas fa-tags"></i> Categorias</span>
                 <h2 class="title">Procurar por Categoria</h2>
             </div>
-            <div class="owl-carousel">
+            <div class="owl-carousel" style="display: flex; align-items:center; margin:auto;">
 
                 <?php foreach ($data['categories'] as $category) : ?>
-                    <div style="width: 163px;">
+                    <div style="width: 163px;margin:0 100px;">
                         <div class="categrie-product sal-animate">
                             <a href="<?= $category['link'] ?>" tabindex="-1">
-                                <img class="img-fluid" src="<?= $category['image'] ?>" alt="product categorie">
+                                <img class="img-fluid category-img" width="40" height="40" src="<?= $category['image'] ?>" alt="product categorie">
                                 <h6 class="cat-title"><?= $category['name'] ?></h6>
                             </a>
                         </div>
@@ -175,9 +175,9 @@ $data['categories'] = $categories_formatted;
                         <?php foreach ($data['products_new'] as $product) : ?>
                             <!-- Single Product Start -->
                             <div class="axil-product product-style-two" style="text-align: center;">
-                                <div class="thumbnail" style="display:flex; align-item:center; justify-content:center; ">
+                                <div class="thumbnail" style="display:flex; align-item:center; justify-content:center; width:300px; ">
                                     <a href="<?= $product['link'] ?>" tabindex="-1">
-                                        <div class="sal-animate" style="width:190px;">
+                                        <div class="sal-animate" style="width:210px; margin: 15px;">
                                             <?= $product['image'] ?>
                                         </div>
                                     </a>

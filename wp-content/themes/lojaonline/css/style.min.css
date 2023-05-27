@@ -2835,6 +2835,10 @@ button.axil-btn.wishlist-btn:hover:before {
 }
 @media only screen and (max-width: 767px) {
   .axil-categorie-area .section-title-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin-bottom: 0;
   }
 }
@@ -3548,10 +3552,13 @@ button.axil-btn.wishlist-btn:hover:before {
 }
 .section-title-wrapper {
   margin-bottom: 40px;
-  padding-right: 100px;
+  padding-right: 0px;
 }
 @media only screen and (max-width: 767px) {
   .section-title-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     margin-bottom: 30px;
   }
 }
