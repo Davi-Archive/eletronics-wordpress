@@ -22,7 +22,7 @@
       axilInit.headerIconToggle();
       axilInit.priceRangeSlider();
       axilInit.axilSlickActivation();
-      axilInit.sideOffcanvasToggle(".cart-dropdown-btn", "#cart-dropdown");
+      //axilInit.sideOffcanvasToggle(".cart-dropdown-btn", "#cart-dropdown");
       axilInit.sideOffcanvasToggle(".mobile-nav-toggler", ".header-main-nav");
       axilInit.sideOffcanvasToggle(
         ".department-side-menu",
@@ -360,23 +360,23 @@
 
     sideOffcanvasToggle: function (selectbtn, openElement) {
       $("body").on("click", selectbtn, function (e) {
-       // e.preventDefault();
+       e.preventDefault();
 
-        // var $this = $(this),
-        //   wrapp = $this.parents("body"),
-        //   wrapMask = $("<div / >").addClass("closeMask"),
-        //   cartDropdown = $(openElement);
+        var $this = $(this),
+          wrapp = $this.parents("body"),
+          wrapMask = $("<div / >").addClass("closeMask"),
+          cartDropdown = $(openElement);
 
-        // if (!cartDropdown.hasClass("open")) {
-        //   wrapp.addClass("open");
-        //   cartDropdown.addClass("open");
-        //   cartDropdown.parent().append(wrapMask);
-        //   wrapp.css({
-        //     overflow: "hidden",
-        //   });
-        // } else {
-        //   removeSideMenu();
-        // }
+        if (!cartDropdown.hasClass("open")) {
+          wrapp.addClass("open");
+          cartDropdown.addClass("open");
+          cartDropdown.parent().append(wrapMask);
+          wrapp.css({
+            overflow: "hidden",
+          });
+        } else {
+          removeSideMenu();
+        }
 
         function removeSideMenu() {
           wrapp.removeAttr("style");
